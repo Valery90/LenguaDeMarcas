@@ -1,12 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+    <link type="text/css" rel="stylesheet" href="04_sudoku.css">
+    <title>Sudokus para maquetar</title>
 </head>
+
 <body>
-    
+    <h1>Sudokus para maquetar</h1>
+    <h2>Sudoku Inicial</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td class="candidatos">1 4 9</td>
+                <td class="candidatos">1 2 4 9</td>
+                <td class="candidatos">1 4</td>
+                <td class="candidatos">1 9</td>
+                <td class="candidatos">1 2 7 8 9</td>
+                <td class="original">5</td>
+                <td class="original">3</td>
+                <td class="original">6</td>
+                <td class="candidatos">2 4 7 8</td>
+            </tr>
+            <tr>
+                <td class="candidatos">4 5 6 9</td>
+                <td class="candidatos">2 4 5 6 9</td>
+                <td class="original">8</td>
+                <td class="candidatos">9</td>
+                <td class="candidatos">2 7 9</td>
+                <td class="original">3</td>
+                <td class="original">1</td>
+                <td class="candidatos">2 4 5 7</td>
+                <td class="candidatos">2 4 5 7</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">1 2 5</td>
+                <td class="original">7</td>
+                <td class="original">6</td>
+                <td class="candidatos">1 2 8</td>
+                <td class="original">4</td>
+                <td class="candidatos">2 8</td>
+                <td class="original">9</td>
+                <td class="candidatos">2 5 8</td>
+            </tr>
+            <tr>
+                <td class="original">2</td>
+                <td class="candidatos">1 4 9</td>
+                <td class="candidatos">1 3 4</td>
+                <td class="candidatos">1 3 4 9</td>
+                <td class="candidatos">1 3 4 6 7 9</td>
+                <td class="candidatos">1 6 7</td>
+                <td class="original">5</td>
+                <td class="original">8</td>
+                <td class="candidatos">1 4 6 7 9</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 3 4 5 7 9</td>
+                <td class="candidatos">1 4 5 9</td>
+                <td class="candidatos">1 3 4 5</td>
+                <td class="candidatos">1 3 4 5 9</td>
+                <td class="candidatos">1 2 3 4 5 6 7 8 9</td>
+                <td class="candidatos">1 2 6 7 8</td>
+                <td class="candidatos">2 6 7</td>
+                <td class="candidatos">1 2 4 7</td>
+                <td class="candidatos">1 2 4 6 7 9</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 7 9</td>
+                <td class="original">8</td>
+                <td class="original">6</td>
+                <td class="candidatos">1 4 5 9</td>
+                <td class="candidatos">1 2 4 5 7 9</td>
+                <td class="candidatos">1 2 7</td>
+                <td class="candidatos">2 7</td>
+                <td class="candidatos">1 2 4 7</td>
+                <td class="original">3</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 5 6</td>
+                <td class="original">3</td>
+                <td class="candidatos">1 5</td>
+                <td class="original">8</td>
+                <td class="candidatos">1 5 6</td>
+                <td class="original">9</td>
+                <td class="original">4</td>
+                <td class="candidatos">1 2 5 7</td>
+                <td class="candidatos">1 2 5 6 7</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 6 8</td>
+                <td class="candidatos">1 4 5 6</td>
+                <td class="original">2</td>
+                <td class="original">7</td>
+                <td class="candidatos">1 3 4 5 6</td>
+                <td class="candidatos">1 6</td>
+                <td class="original">9</td>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">1 5 6 8</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 6 8</td>
+                <td class="original">7</td>
+                <td class="original">9</td>
+                <td class="original">2</td>
+                <td class="candidatos">1 3 4 5 6</td>
+                <td class="candidatos">1 6</td>
+                <td class="candidatos">6 8</td>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">1 5 6 8</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Sudoku A Medias</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td class="resuelto">9</td>
+                <td class="resuelto">2</td>
+                <td class="resuelto">4</td>
+                <td class="resuelto">1</td>
+                <td class="candidatos">7 8</td>
+                <td class="original">5</td>
+                <td class="original">3</td>
+                <td class="original">6</td>
+                <td class="candidatos">7 8</td>
+            </tr>
+            <tr>
+                <td class="candidatos">5 6</td>
+                <td class="candidatos">5 6</td>
+                <td class="original">8</td>
+                <td class="resuelto">9</td>
+                <td class="candidatos">2 7</td>
+                <td class="original">3</td>
+                <td class="original">1</td>
+                <td class="candidatos">2 4 7</td>
+                <td class="candidatos">2 4 7</td>
+            </tr>
+            <tr>
+                <td class="resuelto">3</td>
+                <td class="resuelto">1</td>
+                <td class="original">7</td>
+                <td class="original">6</td>
+                <td class="candidatos">2 8</td>
+                <td class="original">4</td>
+                <td class="candidatos">2 8</td>
+                <td class="original">9</td>
+                <td class="resuelto">5</td>
+            </tr>
+            <tr>
+                <td class="original">2</td>
+                <td class="candidatos">4 9</td>
+                <td class="candidatos">1 3</td>
+                <td class="candidatos">3 4</td>
+                <td class="candidatos">1 3 4 6 7 9</td>
+                <td class="candidatos">7</td>
+                <td class="original">5</td>
+                <td class="original">8</td>
+                <td class="candidatos">1 4 6 7 9</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 7</td>
+                <td class="candidatos">4 5 9</td>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">3 4 5</td>
+                <td class="candidatos">1 2 3 4 5 6 7 8 9</td>
+                <td class="candidatos">2 7 8</td>
+                <td class="candidatos">2 6 7</td>
+                <td class="candidatos">1 2 4 7</td>
+                <td class="candidatos">1 2 4 6 7 9</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 7</td>
+                <td class="original">8</td>
+                <td class="original">6</td>
+                <td class="candidatos">4 5</td>
+                <td class="candidatos">1 2 4 5 7 9</td>
+                <td class="candidatos">2 7</td>
+                <td class="candidatos">2 7</td>
+                <td class="candidatos">1 2 4 7</td>
+                <td class="original">3</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 5 6</td>
+                <td class="original">3</td>
+                <td class="candidatos">1 5</td>
+                <td class="original">8</td>
+                <td class="candidatos">1 5 6</td>
+                <td class="original">9</td>
+                <td class="original">4</td>
+                <td class="candidatos">1 2 5 7</td>
+                <td class="candidatos">1 2 6 7</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 6 8</td>
+                <td class="candidatos">4 5 6</td>
+                <td class="original">2</td>
+                <td class="original">7</td>
+                <td class="candidatos">1 3 4 5 6</td>
+                <td class="candidatos">1 6</td>
+                <td class="original">9</td>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">1 6 8</td>
+            </tr>
+            <tr>
+                <td class="candidatos">1 4 5 6 8</td>
+                <td class="original">7</td>
+                <td class="original">9</td>
+                <td class="original">2</td>
+                <td class="candidatos">1 3 4 5 6</td>
+                <td class="candidatos">1 6</td>
+                <td class="candidatos">6 8</td>
+                <td class="candidatos">1 3 5</td>
+                <td class="candidatos">1 6 8</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Sudoku Resuelto</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td class="resuelto">9</td>
+                <td class="resuelto">2</td>
+                <td class="resuelto">4</td>
+                <td class="resuelto">1</td>
+                <td class="resuelto">8</td>
+                <td class="original">5</td>
+                <td class="original">3</td>
+                <td class="original">6</td>
+                <td class="resuelto">7</td>
+            </tr>
+            <tr>
+                <td class="resuelto">5</td>
+                <td class="resuelto">6</td>
+                <td class="original">8</td>
+                <td class="resuelto">9</td>
+                <td class="resuelto">7</td>
+                <td class="original">3</td>
+                <td class="original">1</td>
+                <td class="resuelto">2</td>
+                <td class="resuelto">4</td>
+            </tr>
+            <tr>
+                <td class="resuelto">3</td>
+                <td class="resuelto">1</td>
+                <td class="original">7</td>
+                <td class="original">6</td>
+                <td class="resuelto">2</td>
+                <td class="original">4</td>
+                <td class="resuelto">8</td>
+                <td class="original">9</td>
+                <td class="resuelto">5</td>
+            </tr>
+            <tr>
+                <td class="original">2</td>
+                <td class="resuelto">9</td>
+                <td class="resuelto">3</td>
+                <td class="resuelto">4</td>
+                <td class="resuelto">1</td>
+                <td class="resuelto">7</td>
+                <td class="original">5</td>
+                <td class="original">8</td>
+                <td class="resuelto">6</td>
+            </tr>
+            <tr>
+                <td class="resuelto">7</td>
+                <td class="resuelto">4</td>
+                <td class="resuelto">5</td>
+                <td class="resuelto">3</td>
+                <td class="resuelto">6</td>
+                <td class="resuelto">8</td>
+                <td class="resuelto">2</td>
+                <td class="resuelto">1</td>
+                <td class="resuelto">9</td>
+            </tr>
+            <tr>
+                <td class="resuelto">1</td>
+                <td class="original">8</td>
+                <td class="original">6</td>
+                <td class="resuelto">5</td>
+                <td class="resuelto">9</td>
+                <td class="resuelto">2</td>
+                <td class="resuelto">7</td>
+                <td class="resuelto">4</td>
+                <td class="original">3</td>
+            </tr>
+            <tr>
+                <td class="resuelto">6</td>
+                <td class="original">3</td>
+                <td class="resuelto">1</td>
+                <td class="original">8</td>
+                <td class="resuelto">5</td>
+                <td class="original">9</td>
+                <td class="original">4</td>
+                <td class="resuelto">7</td>
+                <td class="resuelto">2</td>
+            </tr>
+            <tr>
+                <td class="resuelto">8</td>
+                <td class="resuelto">5</td>
+                <td class="original">2</td>
+                <td class="original">7</td>
+                <td class="resuelto">4</td>
+                <td class="resuelto">6</td>
+                <td class="original">9</td>
+                <td class="resuelto">3</td>
+                <td class="resuelto">1</td>
+            </tr>
+            <tr>
+                <td class="resuelto">4</td>
+                <td class="original">7</td>
+                <td class="original">9</td>
+                <td class="original">2</td>
+                <td class="resuelto">3</td>
+                <td class="resuelto">1</td>
+                <td class="resuelto">6</td>
+                <td class="resuelto">5</td>
+                <td class="resuelto">8</td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
+
 </html>
