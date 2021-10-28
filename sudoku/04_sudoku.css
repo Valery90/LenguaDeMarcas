@@ -1,4 +1,5 @@
 
+
 table {
     border: 3px solid black;
     border-collapse: collapse;
@@ -15,4 +16,22 @@ td {
  tr:nth-of-type(3n) td {
     border-bottom: 3px solid black;
  }
+ .original{
+    color: black;
+    font-size: 40px;
+ }
+ .candidatos{
+    color: green;
+    font-size: 19px;
+    font-weight: bold;
+ }
+ table td{
+    padding: 5px;
+ }
+ .resuelto{
+   color: red;
+   font-size: 40px;  
+ }
+
+ 
  
