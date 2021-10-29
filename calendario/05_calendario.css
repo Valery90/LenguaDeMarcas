@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+table{
+  
+    border-collapse: collapse;
+    margin: 0em 2em;
+}
+table td{
+   font-size: 12px;
+
+}
+
+
+thead{
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+#enero, #mayo{
+    margin-top: 24px;
+}
+.mes{
+    padding: auto;
+}
+table {
+    width:250px
+}
+
+table tr {
+     height:2em;
+     }
+
+
