@@ -1,0 +1,255 @@
+/************************************************************************* 
+  REGLAS DE ESTILO PARA TEXTO
+**************************************************************************/
+/* Voy a ir definiendo propiedades de la etiqueta body que serán en su
+   mayoría heredables. Los "hijos" de body, es decir, los elementos que
+   haya dentro de body -básicamente títulos y párrafos- tendrán las mismas
+   propiedades.  */
+
+/*************************************************************************
+   COLOR DE TEXTO Y DE FONDO 
+**************************************************************************/
+body {
+  background-color: #feffdc; /* Color de fondo */
+  color: #6633ff; /* Color del texto */
+}
+
+/*
+Se puede dar un color de varias formas. 
+
+Lo habitual es algo como #rrggbb Que son dígitos hexadecimales de manera que cada pareja toma valores entre 0 y 255, o sea una densidad de color de un byte.
+A veces se pone #rgb , por ejemplo #3bd equvale a #33bbdd
+
+Hay 16 colores básicos que siempre van bien
+
+ Los colores van en hexadecimal. Sin embargo hay 16 colores básicos que al menos en teoría todo navegador interpreta bien:
+   aqua
+   black
+   blue
+   fuchsia
+   gray
+   green
+   lime
+   maroon
+   navy
+   olive
+   purple
+   red
+   silver
+   teal
+   white
+   yellow
+
+Hay una serie de colores con nombre que todos los navegadores conocen. Los tenemos en
+https://en.wikipedia.org/wiki/Web_colors
+
+Podemos usar expresiones del tipo rgb(200,240,103) 
+*/
+strong{
+  color: #31b173f5;
+}
+/************************************************************************* 
+   TIPO DE LETRA  
+*************************************************************************/
+body {
+  font-family: Arial,Helvetica,sans-serif; /* Tipo de letra */
+}  
+
+/* Siempre pondremos más de un tipo de letra. Si alguno de ellos
+   contiene espacios lo escribiremos entre comillas.
+   El navegador usará el primer tipo de letra disponible de la
+   lista. Es muy conveniente usar al final un TIPO GENÉRICO que puede ser
+   serif, sans-serif, cursive, fantasy, monospace, que siempre existe. */
+/*************************************************************************
+   TAMAÑO DE LA FUENTE  
+*************************************************************************/
+body {
+  font-size: 120%; /* Tamaño del texto */
+}  
+
+/* Para expresar tamaños, hay varias unidades:
+
+    UNIDADES ABSOLUTAS:
+    cm->centímetros
+    mm->milímetro
+    in->pulgadas=2.54 cm
+    pt->punto=1/72 de pulgada
+    pc->pica=12 puntos
+    px->pixel
+    
+    UNIDADES RELATIVAS:
+    em->Tamaño de la fuente (altura de la M): si pongo 2, el doble de lo que había
+    ex->Tamaño de la fuente (altura de la x): si pongo 2, el doble de lo que había
+    %->Porcentaje
+    
+    SE RECOMIENDA EL USO DE UNIDADES RELATIVAS, ESPECIALMENTE em
+*/
+
+/*
+    Para el TAMAÑO DE FUENTE, existen PALABRAS CLAVE:
+    
+    TAMAÑOS RELATIVOS:
+    font-size: larger;
+    font-size: smaller;
+    
+    TAMAÑOS ABSOLUTOS (DE MENOR A MAYOR):
+    font-size: xx-small;
+    font-size: x-small;
+    font-size: small;
+    font-size: medium;
+    font-size: large;
+    font-size: x-large;
+    font-size: xx-large;
+*/
+/*************************************************************************
+   ESPACIO ENTRE LÍNEAS. 
+*************************************************************************/
+
+body {
+  line-height: 1.5em;/* Altura de línea */
+}  
+
+/*************************************************************************
+   PESO DE LA FUENTE 
+*************************************************************************/
+
+body {
+  font-weight: bold;/* Peso de la fuente */
+}  
+strong {
+	font-weight:normal;
+}
+
+/* El peso de la fuente puede tomar los siguientes valores:
+
+    ABSOLUTOS: normal y negrita
+    font-weight: normal;
+    font-weight: bold;   
+    
+    RELATIVOS
+    font-weight: bolder;
+    font-weight: lighter;
+    
+    HEREDADO
+    font-weight: inherit;
+*/
+/************************************************************************* 
+   ESTILO DE LA FUENTE 
+*************************************************************************/
+
+body {
+  font-style: normal; /* Estilo de la fuente */
+}  
+
+/* El estilo de la fuente puede tomar los siguientes valores:
+
+    font-style: normal;
+    font-style: italic;
+    font-style: oblique;
+    font-style: inherit;
+*/
+
+/************************************************************************* 
+   TRANSFORMACIONES DE TEXTO (MAYUSCULAS Y MINUSCULAS) 
+*************************************************************************/
+body {
+  text-transform: none; /* Transformaciones mayúsculas-minúsculas */
+}  
+
+/* text-transform puede tomar los siguientes valores:
+
+    text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform: capitalize;
+    text-transform: none;
+   
+   Las tres primeras significan, respectivamente, mayúsculas, minúsculas y 
+   primera letra en mayúsculas.
+*/
+/************************************************************************* 
+   ALINEACIÓN DEL TEXTO (JUSTIFICADO) 
+*************************************************************************/
+
+body {
+  text-align: justify;
+}  
+/* text-align puede tomar los siguientes valores:
+
+    text-align: left;
+    text-align: start;
+    text-align: right;
+    text-align: end;
+    text-align: center;
+    text-align: justify;
+*/
+
+/************************************************************************* 
+   DECORACIÓN DEL TEXTO (SUBRAYADO) 
+*************************************************************************/
+
+body {
+  text-decoration:  none;
+}  
+/*
+AHORA SE PUEDE COMBINAR CON COLORES
+
+  text-decoration: underline red;
+  
+INCLUSO UN ESTILO DE LINEA
+
+  text-decoration: underline red dotted;
+  
+*/
+/* text-decoration puede tomar los siguientes valores:
+
+    text-decoration: none;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: blink;
+    
+    El primero se suele usar para que los links no aparezcan subrayados.
+    Los tres siguienter hacen que aparezca una línea por encima, sobre o 
+    por debajo del texto.
+    El último es el parpadeo y puede provocar crisis nerviosas.
+*/
+/************************************************************************* 
+   INDENTADO DEL TEXTO (PRIMERA LÍNEA) 
+*************************************************************************/
+body {
+  text-indent: 1.2cm;
+}  
+
+/*
+Posiblemente sea más razonable usar unidades relativas
+
+   text-indent: 1.3em;
+*/
+
+/*
+SOMBRAS DE TEXTO
+*/
+
+h1{
+	text-shadow:5px 5px 8px #e8bbb4;
+}
+
+h1{
+	letter-spacing:.5em;
+	letter-spacing:2px;
+}
+
+h1{
+	word-spacing :5px;
+}
+
+/*
+Controlar la forma de tratar el espacio en blanco.
+
+Con el valor pre hace como la etiqueta <pre>
+ 
+white-space: normal|nowrap|pre|pre-line|pre-wrap;
+*/
+
+
+

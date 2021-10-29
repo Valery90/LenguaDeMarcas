@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0053)http://10.0.56.5/~juanjo/00_primero/03_entidades.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+-->
+
+<title>Entidades en HTML</title>
+</head>
+<body cz-shortcut-listen="true">
+<h1>Entidades en HTML</h1>
+<p>Una entidad es una expresión que comienza por &amp; y termina por ;</p>
+<p>Entre ambos símbolos van siempre caracteres ASCII, con lo que se ven igual en cualquier tabla de códigos y se transmiten sin problemas por la red.</p>
+<p>Hay varios motivos para usar entidades</p>
+<h2>Entidades para resolver problemas de tablas de códigos</h2>
+<p>Vocales acentuadas en UTF-8 á é í ó ú </p>
+<p>Vocales acentuadas en ANSI (iso-8859-1) � � � � � </p>
+<p>Vocales con entidades á é í ó ú</p>
+<p>Vocales acentuadas en mayúscula Á É Í Ó Ú</p>
+<p>Los símbolos que nos faltan: ñ Ñ ü Ü</p>
+<p>Hoy en día, este uso de las entidades no tiene mucho sentido</p>
+<h2>Entidades como caracteres especiales que queremos usar como literales</h2>
+<p>Por ejemplo, si ponemos &amp;, el navegador puede interpretar inicio de entidad, si ponemos &amp; lo entiende literal</p>
+<p>También es útil si queremos mostrar entidades:</p>
+<!--
+Queremos escribir &aacute es á con cualquier tabla de códigos
+-->
+<p>&amp;aacute; es á</p>
+<!--
+Queremos escribir Un párrafo se comienza por <p>. Hay que quitarle a < y > su significado de inicio y fin de etiqueta
+-->
+<p>Un párrafo se comienza por &lt;p&gt; y se termina por &lt;/p&gt;</p>
+<p>Para no confundirnos con inicio y fin de cadena, también hay entidades para las comillas dobles y simples " ' &amp;quot; &amp;apos; </p>
+<h2>Nos sirven para mostrar algunos caracteres que no se extraen con comodidad del teclado</h2>
+<p>El símbolo de copyright ©</p>
+<p>El símbolo de euro €</p>
+<p>Flecha a la derecha →</p>
+<p>Flecha a la izquierda ←</p>
+<!--
+Hay una entidad muy útil que es el &nbsp;
+-->
+<p>20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, 20 Km, </p>
+<p>20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, 20&nbsp;Km, </p>
+<p>C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A </p>
+<h2>Distintas formas de escribir entidades</h2>
+<p>Podemos escribir la A con acento de tres maneras Á Á Á &amp;Aacute; &amp;#193; &amp;#xC1; </p>
+<h2>Lo nuevo del unicode ⚝</h2>
+
+<p>Tenemos hasta un panda 🐼</p>
+
+</body></html>

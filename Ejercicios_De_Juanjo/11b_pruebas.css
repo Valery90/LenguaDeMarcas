@@ -1,0 +1,18 @@
+body {
+  background-color: navy; /* Color de fondo */
+  color: white; /* Color del texto */
+}
+h2{
+	background-color:rgb(100,100,100);
+}
+strong{
+	/*
+	font-weight:bold;
+	es la opción por defecto en strong
+	*/
+	font-weight:normal;
+}
+p{
+	line-height:1.4em;
+}
+

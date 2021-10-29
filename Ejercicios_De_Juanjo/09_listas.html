@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0050)http://10.0.56.5/~juanjo/00_primero/09_listas.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Listas en HTML</title>
+</head>
+<body cz-shortcut-listen="true">
+<h1>Listas en HTML</h1>
+<p>En HTML tenemos tres tipos de listas</p>
+<h2>Listas no ordenadas</h2>
+<p>Las listas no ordenadas las realizaremos con la etiqueta <code>&lt;ul&gt;</code></p>
+<p>ul → unordered list</p>
+<p>li → list item</p>
+<ul type="disc"><!--"square" "circle" "disc" -->
+	<li>Primer Elemento</li>
+	<li>Segundo</li>
+	<li>Tercero</li>
+</ul>
+<p>No 
+
+
+
+es recomendable 
+
+
+
+pero podemos usar           el atributo type</p>
+<pre><code>
+&lt;ul type="disc"&gt;&lt;!--"square" "circle" "disc" --&gt;
+	&lt;li&gt;Primer Elemento&lt;/li&gt;
+	&lt;li&gt;Segundo&lt;/li&gt;
+	&lt;li&gt;Tercero&lt;/li&gt;
+&lt;/ul&gt;
+
+</code>
+</pre>
+
+<h2>Listas Ordenadas</h2>
+
+<p>Son las que en vez de un símbolo tienen a la izquierda de cada item un número o similar. Las construimos con &lt;ol&gt;</p>
+<p>ol → ordered list</p>
+<p>li → list item</p>
+<!--
+Atributos de ol
+reversed ....... lista invertida
+type puede ser "1" "I" "i" "A" "a"
+start="número"
+-->
+<!--
+Atributo de li
+value="numero"
+-->
+<ol type="A" start="3">
+	<li>El uno</li>
+	<li>El dos</li>
+	<li value="15">El tres</li>
+	<li>otro más</li>
+</ol>
+<h2>Listas anidadas</h2>
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+<p>Date cuenta de que la segunda lista está en un elemento &lt;li&gt;</p> 
+<pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea
+    &lt;ul&gt;
+      &lt;li&gt;Black tea&lt;/li&gt;
+      &lt;li&gt;Green tea&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+</code>
+</pre>
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+  </li>
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  <li>Milk</li>
+</ul>
+<h2>Lista de definiciones</h2>
+<p>Sos las adecuadas para definir términos</p>
+<p>dl → definition list</p>
+<p>dt &amp;rarr definition list term</p>
+<p>dd → definition lis definition</p>
+
+<dl>
+	<dt>HTML</dt>
+	<dd>Hyper text markup language. Es el lenguaje de estructura para documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos documentos web</dd>
+	<dt>CSS</dt>
+	<dd>Cascade Style Sheet. Es le lenguaje que da estilo a las páginas web</dd>
+	<dt>Javascript</dt>
+	<dd>Lenguaje de programación que da funcionalidad a las páginas web</dd>
+</dl>
+
+
+</body></html>

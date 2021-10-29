@@ -1,0 +1,142 @@
+
+
+table.calendario{
+	margin:auto;
+}
+
+/*
+Separación entre meses
+*/
+table.calendario>tbody>tr>td{
+	padding:15px;
+}
+/*
+
+table.mes{
+	padding:15px;
+}
+
+*/
+
+
+table.calendario>tbody>tr>td{
+	vertical-align:top;
+}
+/*
+Como las pequeñas no tienen caption, no necesito usar >
+*/
+table.calendario>caption{
+	text-shadow: 15px 15px navy;
+	padding-bottom: 30px;
+}
+
+table.mes thead{
+	color:white;
+	background-color: #cc8787;
+	/*
+	border:3px dotted blue;
+	*/
+}
+
+table.mes {
+	border-collapse: collapse;
+}
+
+/*
+Mes en mayúsculas
+*/
+table.mes thead tr:first-child th
+{
+	text-transform: uppercase;
+}
+
+table.mes thead tr:nth-child(2) th{
+	text-transform: capitalize;
+}
+
+table.mes tbody{
+	background-color: cyan;
+	color:#555;
+	text-align: right;
+}
+table.mes td, table.mes th {
+	padding: .4em;
+}
+/*
+No hace border-radius si no definimos un borde
+*/
+table.mes {
+	border-collapse:separate;
+	border:1px solid white;
+	border-radius: 25px ;
+}
+
+
+
+table.calendario{
+	margin:auto;
+}
+
+/*
+Separación entre meses
+*/
+table.calendario>tbody>tr>td{
+	padding:15px;
+}
+/*
+
+table.mes{
+	padding:15px;
+}
+
+*/
+
+
+table.calendario>tbody>tr>td{
+	vertical-align:top;
+}
+/*
+Como las pequeñas no tienen caption, no necesito usar >
+*/
+table.calendario>caption{
+	text-shadow: 15px 15px navy;
+	padding-bottom: 30px;
+}
+
+table.mes thead{
+	color:white;
+	background-color: #cc8787;
+	/*
+	border:3px dotted blue;
+	*/
+}
+
+table.mes {
+	border-collapse: collapse;
+}
+
+/*
+Mes en mayúsculas
+*/
+table.mes thead tr:first-child th
+{
+	text-transform: uppercase;
+}
+
+table.mes thead tr:nth-child(2) th{
+	text-transform: capitalize;
+}
+
+table.mes tbody{
+	background-color: cyan;
+	color:#555;
+	text-align: right;
+}
+table.mes td, table.mes th {
+	padding: .4em;
+}
+
+table.mes td:nth-child(6),table.mes td:nth-child(7),td.festivo{
+	color:red;
+	background-color:grey;
+}

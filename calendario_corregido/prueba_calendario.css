@@ -15,12 +15,26 @@ padding: 15px;
 table.mes{
     padding: 17px;
 }
+
 /*Mas en mayusculas*/
 table.mes thead tr:first-child th{/*quiero que se ponga en mayusuclas el primer hijo*/
     text-transform: uppercase;
 }
 table.mes thead tr:nth-child(2) th{
     text-transform: capitalize;
+}
+table.mes tbody{
+    background-color: cyan;
+    color: #555;
+    text-align: right;
+}
+table.mes td, table.mes th{
+    padding: .4em;
+}
+
+table.mes td:nth-child(6), table.mes td:nth-child(7), td.festivo {/*Dias festivos*/
+    color: red;
+    background-color: #ddd;
 }
 
 table.calendario>tbody>tr>td{ 
@@ -34,11 +48,8 @@ table.calendario>caption{
 table.mes thead{
     color: white;
     background-color: #cc8787;
-    border: 3px dotted blue;
 }
 table.mes th{
     border-collapse: collapse;
 }
-table{
-    color: red;
-}
+
