@@ -39,3 +39,6 @@ table.mes thead{
 table.mes th{
     border-collapse: collapse;
 }
+table{
+    color: red;
+}
