@@ -10,7 +10,7 @@
 
 <body>
     <table class="calendario">
-        <caption>Calendario 2021-2022</caption>
+        <caption>Calendario Escolar 2021-2022</caption>
         <tr>
             <td>
                 <table class="mes">
@@ -43,7 +43,7 @@
                         <tr>
                             <td>6</td>
                             <td>7</td>
-                            <td>8</td>
+                            <td class="inicio">8</td>
                             <td>9</td>
                             <td>10</td>
                             <td>11</td>
@@ -117,8 +117,8 @@
                             <td>10</td>
                         </tr>
                         <tr>
-                            <td>11</td>
-                            <td>12</td>
+                            <td class="puente">11</td>
+                            <td class="fiesta">12</td>
                             <td>13</td>
                             <td>14</td>
                             <td>15</td>
@@ -166,7 +166,7 @@
                     <!-- ******************** NOVIEMBRE ************ -->
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <td class="fiesta">1</td>
                             <td>2</td>
                             <td>3</td>
                             <td>4</td>
@@ -244,9 +244,9 @@
                             <td>5</td>
                         </tr>
                         <tr>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
+                            <td class="fiesta">6</td>
+                            <td class="puente">7</td>
+                            <td class="fiesta">8</td>
                             <td>9</td>
                             <td>10</td>
                             <td>11</td>
@@ -266,16 +266,16 @@
                             <td>21</td>
                             <td>22</td>
                             <td>23</td>
-                            <td>24</td>
+                            <td class="puente">24</td>
                             <td>25</td>
                             <td>26</td>
                         </tr>
                         <tr>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
+                            <td class="puente">27</td>
+                            <td class="puente">28</td>
+                            <td class="puente">29</td>
+                            <td class="puente">30</td>
+                            <td class="puente">31</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -283,7 +283,7 @@
                 </table>
             </td>
             <td>
-                <table id="enero" class="mes" >
+                <table id="enero" class="mes">
                     <!-- ENERO -->
                     <thead>
                         <tr>
@@ -311,11 +311,11 @@
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
+                            <td class="puente">3</td>
+                            <td class="puente">4</td>
+                            <td class="puente">5</td>
+                            <td class="fiesta">6</td>
+                            <td class="puente">7</td>
                             <td>8</td>
                             <td>9</td>
                         </tr>
@@ -414,7 +414,7 @@
                             <td>27</td>
                         </tr>
                         <tr>
-                            <td>28</td>
+                            <td class="puente">28</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -532,20 +532,20 @@
                             <td>10</td>
                         </tr>
                         <tr>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
+                            <td class="puente">11</td>
+                            <td class="puente">12</td>
+                            <td class="puente">13</td>
+                            <td class="fiesta">14</td>
+                            <td class="fiesta">15</td>
                             <td>16</td>
                             <td>17</td>
                         </tr>
                         <tr>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
+                            <td class="fiesta">18</td>
+                            <td class="puente">19</td>
+                            <td class="puente">20</td>
+                            <td class="puente">21</td>
+                            <td class="puente">22</td>
                             <td>23</td>
                             <td>24</td>
                         </tr>
@@ -562,7 +562,7 @@
                 </table>
             </td>
             <td>
-                <table class="mes" id="mayo"> 
+                <table class="mes" id="mayo">
                     <!-- MAYO -->
                     <thead>
                         <tr>
@@ -663,7 +663,7 @@
                             <td></td>
                             <td>1</td>
                             <td>2</td>
-                            <td>3</td>
+                            <td class="fin">3</td>
                             <td>4</td>
                             <td>5</td>
                         </tr>
@@ -842,6 +842,14 @@
             </td>
         </tr>
     </table>
+    <div id="pie">
+        <ul>
+            <li class="inicio">INICIO DE CURSO</li>
+            <li class="fin">FIN DE CURSO</li>
+            <li class="fiesta">FESTIVOS OFICIALES</li>
+            <li class="puente">PUENTES</li>
+        </ul>
+    </div>
 </body>
 
 </html>
