@@ -1,0 +1,54 @@
+Provincias;Total
+Total;47450795
+02 Albacete;388270
+03 Alicante/Alacant;1879888
+04 Almería;727945
+01 Araba/Álava;333940
+33 Asturias;1018784
+05 Ávila;157664
+06 Badajoz;672137
+07 Balears, Illes;1171543
+08 Barcelona;5743402
+48 Bizkaia;1159443
+09 Burgos;357650
+10 Cáceres;391850
+11 Cádiz;1244049
+39 Cantabria;582905
+12 Castellón/Castelló;585590
+13 Ciudad Real;495045
+14 Córdoba;781451
+15 Coruña, A;1121815
+16 Cuenca;196139
+20 Gipuzkoa;727121
+17 Girona;781788
+18 Granada;919168
+19 Guadalajara;261995
+21 Huelva;524278
+22 Huesca;222687
+23 Jaén;631381
+24 León;456439
+25 Lleida;438517
+27 Lugo;327946
+28 Madrid;6779888
+29 Málaga;1685920
+30 Murcia;1511251
+31 Navarra;661197
+32 Ourense;306650
+34 Palencia;160321
+35 Palmas, Las;1131065
+36 Pontevedra;945408
+26 Rioja, La;319914
+37 Salamanca;329245
+38 Santa Cruz de Tenerife;1044887
+40 Segovia;153478
+41 Sevilla;1950219
+42 Soria;88884
+43 Tarragona;816772
+44 Teruel;134176
+45 Toledo;703772
+46 Valencia/València;2591875
+47 Valladolid;520649
+49 Zamora;170588
+50 Zaragoza;972528
+51 Ceuta;84202
+52 Melilla;87076
