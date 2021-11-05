@@ -1,0 +1,12 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 80%;
+	margin: 0 auto;
+}
+#cabecera{
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+#pie{
+	border-top: 1px solid black;
+}

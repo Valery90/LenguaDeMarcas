@@ -1,0 +1,68 @@
+/*
+IDENTIFICADORES Y CLASES
+
+Si en una pÃ¡gina hay algÃºn elemento que va a ser el Ãºnico de su tipo,podemos seÃ±alarlo con un identificador en el atributo id.
+
+Supongamos una pÃ¡gina web dividida en zonas.
+Es bastante normal que haya una cabecera, una zona de contenido y un pie.
+Lo normal es que les asociemos identificadores: porque no deberÃ­a haber mÃ¡s de uno de cada.
+
+En una cabecera suele ir el tÃ­tulo del sitio y a lo mejor de la pÃ¡gina, un logo.....
+
+En un pie suele haber informaciÃ³n de contacto, enlaces a otras partes de la empresa, o a otros sitios de la misma empresa
+
+En el contenido va lo que seria el propio cuerpo de la noticia
+
+Muchas veces hay otra caja que es la de navegaciÃ³n 
+<div id="navegacion"></div>
+
+Durante mucho tiempo, los buscadores lo han tenido complicado porque tenÃ­an que andar "adivinando" el papel de cada caja. Hoy en dÃ­a, en HTML5, tenemos algunas etiquetas para eso:
+
+<div id="cabecera"> ............ <header>
+<div id="pie"> ................. <footer>
+<div id="contenido">............ <main>
+<div id="navegacion">........... <nav>
+<div id="izquierda">............ <aside>
+<div id="derecha">.............. <aside>
+
+Hay otras dos llamadas <section> y <article>
+*/
+body{
+  font-family: Arial,Helvetica,san-serif;
+  width: 80%;
+  /*recomendacion es usar el auto ya que si se pone un borde tedriamos que cambiar el margin y el width margin: 0 10%*/
+  margin: 0 auto;
+  background-color: #801D15;
+  color: wheat;
+}
+/*Este selector quiere decir: elemento con id cabecera*/
+#cabecera{
+  background-color: #FFB0AA;
+  color: black;
+}
+/*Este es mas especiifico asi que haria mas caso al mas especifico: Este selector quiere decir: un div con id cabecera */
+/*es muy importante no poner espacios todo unido*/
+div#cabecera{
+  /*se pone en pixeles si fueran fotos y queremos ponerle unos bordes sutiles pero lo general se debe poner em */
+  padding: 1em;
+  border-radius: 79px;
+}
+/*tenemos un selector y una propiedad es decir varios selectores con diferentes propiedades */
+div#cabecera h1, div#cabecera h2{
+  text-align: center;
+}
+/*el selector quien va sufrir lo cambios en el css*/
+#pie{
+  /*un margen puede ser negativo */
+  margin: 0 -10%;
+  background-color: #D4726A;
+  color: white;
+  padding: 2px 10px;
+}
+p.importante{/*parrafo de clase importante*/
+	font-weight:bolder;
+}
+.importante{
+	color:green;
+	background-color:white;
+}

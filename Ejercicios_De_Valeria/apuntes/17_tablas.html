@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!-- hay cuatro etiquetas basicas para confeccionar tablas. -->
+<!-- table...............................inicio y fin de tabla -->
+<!-- tr..................................inicio y fin de línea -->
+<!-- td..................................inicio y fin de celda de datos -->
+<!-- th..................................inicio y fin de celda de cabecera -->
+
+<!-- Hay otra etiqueta que conviene usar y que es caption. Debe ser la primera detras de table y actua de titulo de tabla -->
+<!-- caption...........titulo de tabla  -->
+<!-- Hay otras tres que no son obligatorias pero que despendiendo de las situaciones pueden ser convenientes -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablas en HTML</title>
+<h1>Tablas de HTML</h1>
+<h1>Tablas sencilla</h1>
+<table border="1" summary="Matriculas en grado Superior en Bizkaia">
+<!-- para estar en las busquedas -->
+<caption>Matriculas en grado Superior en Bizkaia</caption> 
+	<th>Familia Porfesional</th>
+	<th>Hombres</th>
+	<th>Mujeres</th>
+	</tr>
+	<tr>
+	<td>Informatica y comunicaciones</td>
+	<td>831</td>
+	<td>139</td>
+	</tr>
+	<tr>
+	<td>Quimica</td>
+	<td>831</td>
+	<td>139</td>
+	</tr>
+</table>
+<h2>Celdas de varias filas y columnas</h2>
+	<!-- podemos usar colspan y rowspan para que las celdas ocupen mas de una fila o mas de una columna  -->
+<table border="1" style="width:100%">
+<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>1</td>
+	<td colspan="2">2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td colspan="4">Recreo</td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+</table>
+
+	<h2>Celdas de varias filas y columnas</h2>
+	<!--
+	Podemos usar colspan y rowspan para que las celdas ocupen mÃ¡s de una fila o mÃ¡s de una columna 
+	-->
+	<table border="1" style="width:100%;">
+	<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+	<tr><td>1</td><td colspan="2">2</td><td>3</td></tr>
+	<tr><td colspan="4">RECREO</td></tr>
+	<tr><td>1</td><td rowspan="2">2</td><td>3</td><td>4</td></tr>
+	<tr><td>1</td><td>2</td></tr>
+	</table>
+	<h2>Tabla dividida en tres zonas</h2>
+	<table border="1">
+		<thead>
+			<tr><th colspan="5">Ganancias de 2017</th></tr>
+			<tr>
+				<th></th>
+				<th>Enero - Marzo</th>
+				<th> Abril -Junio</th>
+				<th>Julio - Octubre</th>
+				<th>Noviembre - Diciembre</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Total</td>
+				<td>30.000</td>
+				<td>75.000</td>
+				<td>60.000</td>
+				<td>66.000</td>
+			</tr>		
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Bizkaia</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+			<tr>
+				<td>Gipuzkoa</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+			<tr>
+				<td>Ãlava</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+		</tbody>
+	</table>
+</head>
+<body>
+
+</body>
+</html>
