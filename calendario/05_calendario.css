@@ -15,7 +15,7 @@ table td{
 }
 table.mes thead{
     text-transform: capitalize;
-    background-color: #F5EEF8;
+    background-color: lavender;
 }
 table.mes tbody{
     text-align: center;
