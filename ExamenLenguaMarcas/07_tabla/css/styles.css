@@ -1,0 +1,45 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    min-width: 800px;
+    border-collapse: collapse;
+    color: #f2f2f293;
+}
+
+table, th, td{
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+thead tr{
+    background-color: #202932;
+    color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #242e39;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #2C3845;
+}
+
+tbody tr:hover {
+    background-color: #99C4F2;
+    color: #242e39;
+}
+
+.alinearCentro{
+    text-align: center;
+}

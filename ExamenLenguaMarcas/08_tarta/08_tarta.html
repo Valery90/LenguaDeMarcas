@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Positivos de COVID</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #chartdiv {
+      width: 80%;
+      height: 500px;
+    }
+    h1{
+    text-align: center;
+    }   
+  </style>
+</head>
+
+<body>
+  <h1>Positivos de COVID por edad en la CAV</h1>
+  <div id="chartdiv"></div>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+  <script>
+    am5.ready(function () {
+
+
+      var root = am5.Root.new("chartdiv");
+
+
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        radius: am5.percent(90),
+        innerRadius: am5.percent(50),
+        layout: root.horizontalLayout
+      }));
+
+
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        name: "Series",
+        valueField: "sales",
+        categoryField: "country"
+      }));
+
+
+      series.data.setAll([{
+        country: "0-9 años",
+        sales: 20811
+      }, {
+        country: "10-19 años",
+        sales: 38854
+      }, {
+        country: "20-29 años",
+        sales: 39523
+      }, {
+        country: "30-39 años",
+        sales: 33972
+      }, {
+        country: "40-49 años",
+        sales: 43043
+      }, {
+        country: "50-59 años",
+        sales: 38813
+      }, {
+        country: "60-69 años",
+        sales: 24532
+      }, {
+        country: "70-79 años",
+        sales: 15706
+      }, {
+        country: "80-89 años",
+        sales: 12162
+      },
+      {
+        country: "+90 años",
+        sales: 5157
+      }
+      ]);
+
+
+      series.labels.template.set("visible", false);
+      series.ticks.template.set("visible", false);
+
+
+      series.slices.template.set("strokeOpacity", 0);
+      series.slices.template.set("fillGradient", am5.RadialGradient.new(root, {
+        stops: [{
+          brighten: -0.8
+        }, {
+          brighten: -0.8
+        }, {
+          brighten: -0.5
+        }, {
+          brighten: 0
+        }, {
+          brighten: -0.5
+        }]
+      }));
+
+      var legend = chart.children.push(am5.Legend.new(root, {
+        centerY: am5.percent(50),
+        y: am5.percent(50),
+        marginTop: 15,
+        marginBottom: 15,
+        layout: root.verticalLayout
+      }));
+
+      legend.data.setAll(series.dataItems);
+
+
+      series.appear(1000, 100);
+
+    });
+  </script>
+
+
+</body>
+
+</html>
