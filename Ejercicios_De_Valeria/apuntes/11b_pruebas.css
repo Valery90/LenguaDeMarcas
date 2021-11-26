@@ -1,0 +1,48 @@
+body{
+	background-color: yellow; /*poner color hueso nunca muy blanco recomendacion*/
+	font-family: Arialila, monospace;
+}
+h1{
+	background-color:navy;
+	color:white;
+	/*poner decoracion al texto*/
+	text-decoration: red underline dotted;
+	/*la mejor practica para poner una linea debajo del texto como efecto subrayado seria ponerlo en la casa*/
+	/*quitar el subrayado de los enlaces*/
+	/*! text-decoration: thistle; */
+	/*para dar sobra al texto*/
+	text-shadow: 17px 10px 3px #e8bbb4;
+	/*para distinguir un texto de la pagina en manera sutil*/
+	letter-spacing: 1em;
+}
+h2{
+	background-color: rgb(100,100,100);
+}
+strong{
+	/*
+	font-weight:bold;
+	es la opcion por defecto en strong
+	*/
+	font-weight: normal;
+}
+p{
+	line-height: 1.4em;
+	/*line-height: 100% 0 1.4em * es importante dar espacio entre las lineas para que se lean mejor*/
+	text-transform: uppercase;
+	/*Justificar el texto a la derecha es lo mas comun*/
+	text-align:right;
+	/*Seria incorrecto por que el espacio entre palabras es diferente*/
+	/*text-align: justify;*/
+	/*para dar espacio a la derecha al princio del parrafo recomendado siempre poner en % o em es muy recomendado*/
+	text-indent: 0.5em;
+	/*para que el maneje mis espacios de mi parrafo*/
+	white-space: normal;
+}
+	
+/*Mi dice el jefe que es azul*/
+em{
+	background-color: cyan;
+	/*text-transform: uppercase;*/
+}
+
+	

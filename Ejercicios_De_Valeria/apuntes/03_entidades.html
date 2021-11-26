@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> -->
+<title>Entidades en HTML</title>
+</head>
+<body>
+<h1>Entidades en HTML</h1>
+<p>Una entidad es una expresion que comienza por & y termina por ;</p>
+<p>Entre ambos simbolos van siempre caracteres ASCII, con lo que se ven igual en cualquier tabla de codigos y se transmiten sin problemas por la red.</p>
+<p>Hay varios motivos para usar entidades</p>
+<h2>Entidades para resolver problemas de tablas de codigos</h2>
+<p>Vocales acentuadas en UTF-8 á é í ó ú</p>
+<p>Vocales en ANSI (iso-8859-1) á é í ó ú</p>
+<!-- Ctrl + E  para que pille el plugin html tag -->
+<p>Vocales con entidades &aacute; &eacute; &iacute; &oacute; &uacute;</p> 
+<p>Vocales acentuadas en mayuscula &Aacute; &Eacute; &Iacute; &Oacute; &Uacute;</p>
+<p>Los simbolos que nos faltan: &ntilde; &Ntilde; </p>
+<p>Hoy en dia, este uso de las entidades no tiene mucho sentido</p>
+<h2>eEntidades como caracteres especiales que queremos usar como literales</h2>
+<p>Por ejemplo, si ponemos &, el navegador puede interpretar inicio de entidad, si ponemos &amp; lo entiende literal</p>
+<p>Tambien es util si queremos mostrar entiedades:</p>
+<!-- Queremos escribir &aacute es á con cualquier tabla de codigos  -->
+<p>&amp;aacute; es &aacute; </p>
+<!-- Queremos escribir un párrafo se comienza por <p> . Hay que quitarle a <y> su significado de inicio y fin de etiqueta-->
+<p>Un párrafo se comienza por &lt;p&gt; y se termina por &lt;/p&gt;</p>
+<p>para no confundirnos con inicio y finde de cadena, tambien hay entidades para las comillas dobles y simples &quot; &apos; &amp;quot; &amp;apos; </p>
+<h2>Nos sirven para mostrar algunos caracteres que no se extraen con comodidad del teclado</h2>
+<p>El simbolo de copyright &copy; </p>
+<p>El simbolo de euro &euro; </p>
+<p>Flecha a la derecha &rarr; </p>
+<p>Flecha a la izquierda &larr; </p>
+<!-- Hay una entidad muy util que es el &nbsp; -->
+<p> 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, 20 km, </p>
+<p>20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, 20&nbsp;km, </p>
+<p>C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A C&nbsp;&amp;&nbsp;A</p>
+<h2>Distintas formas de escribir entidades</h2>
+<p>Podemos escribir la A con acento de tres maneras &Aacute; &#193; &#xC1; &amp;Aacute; &amp;#193; &amp;#xC1</p>
+<h2>Lo mnuevo del unicode &#9913;</h2>
+<p>Panda: &#128060;</p>
+<!-- https://unicode-table.com/es/sets/star-symbols/ -->
+
+</body>
+</html>

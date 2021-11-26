@@ -1,0 +1,16 @@
+body{
+	border: thick solid red;
+	margin:1cm;
+	
+	
+}
+h1,h2,h3,p{
+	border: thick solid black;
+}
+h1{
+	/*para dar margen por los cuatro lados*/
+	margin: 0 1cm 0 1cm;
+}
+p{
+	padding: 20pt 30pt
+}

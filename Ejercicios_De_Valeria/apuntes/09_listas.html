@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Listas de HTML</title>
+</head>
+<body>
+<h1>Listas de HTML</h1>
+<p>En HTML tenemos tres tipos de listas</p>
+<h2>Listas no ordenadas</h2>
+<!-- Ctrl + e para convertirlo en entidades Ctrol + mayus + e vuleve a su estado original  -->
+<p>Las listas no ordenadas las realizaremos con la etqueta &lt;ol&gt;</p>
+<p>ul &rarr; unordered list</p>
+<p>li &rarr; list item</p>
+se puede 
+<!-- ya no se utiliza el type por que si quieres cambiar el estilo se debe usar el css -->
+<ul type="circle">
+	<li>Primer Elemento</li>
+	<li>Segundo Elemento</li>
+	<li>Tercero Elemento</li>
+</ul>
+
+<!-- <code> para decirle que lo que quiero que se mire es codigo -->
+<!-- <pre> sirve para decirle que esta formatizado -->
+<pre>
+<code>
+&lt;ul type=&quot;circle&quot;&gt;
+&lt;li&gt;Primer Elemento&lt;/li&gt;
+&lt;li&gt;Segundo Elemento&lt;/li&gt;
+&lt;li&gt;Tercero Elemento&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+<!-- atribustos de ol reversed (Lista invertida) TYPE puede ser "1" "I" "i" "A" "a"-->
+<h2>Listas ordenadas</h2>
+<ol reversed>
+	<li>El uno</li>
+	<li>El dos</li>
+	<li>El tres</li>
+	<li>El cuatro</li>
+</ol>
+<!-- no puedo tener un ul dentro de otro ul es incorrecto hay que hacerlo de manera correcta por que para google es erroneo aunque salga bien -->
+<h2>Lista anidadas</h2>
+<p>Es una lista que contiene otra lista </p>
+<ul>
+	<li>Cofee</li>
+	<li>Tea
+		<ul>
+			<li>Black tea</li>
+			<li>Greee tea</li>
+	
+		</ul>
+	</li>
+	<li>Milk</li>
+</ul>
+
+<h2>Lista de definiciones</h2>
+<p>Son las adecuadas para definir terminos</p>
+<p>dl &rarr; definition list</p>
+<p>dt &rarr; definition list term</p>
+<p>dd &rarr; definition list definition</p>
+
+<!-- es para dar definicion a un texto es bien importante que usemos las etiquetas correctas  -->
+<dl>
+	<dt>HTML</dt>
+	<dd>Hyper text markup language.
+	Es el lenguaje de estructura para documentos web documentos documentos documentos documentos documentos documentos documentos
+	</dd>
+	<dt>CSS</dt>
+	<dd>Cascada Style Sheet. Es el lenguaje que da estilo a las paginas web</dd>
+	<dt>JavaScript</dt>
+	<dd>Lenguaje de programacion que da funcionalidad a las paginas web</dd>
+	
+	
+	
+</dl>
+
+</body>
+</html>

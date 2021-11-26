@@ -1,0 +1,64 @@
+/*Podemos */
+table.listado{
+	width: 80%;
+	min-width: 30em; /**/
+	max-width: 40em;
+}
+/*
+El ancho es el 80% del ancho de pÃ¡gina pero
+Si el 80% sale mÃ¡s de 40em lo ignora y se queda en 40em
+Si el 80% sale menos de 30em; lo ignora y se queda en 30em; 
+*/
+table.listado{
+	margin:2em auto;
+}
+/*Mostramos las lineas de tabla tr(la linea, no tiene borde*/
+table.listado,table.listado th ,table.listado td, table.listado caption{
+	border: 1px solid black;
+}
+/*Propiedades especiales de las tablas*/
+table.listado{
+	caption-side:top;/*bottom*/
+	/*Si activamos el color de fondo, no afecta al caption*/
+	/*enseñar o oculatar las celdas vacias */
+	empty-cells:show; /*hide*/
+	border-spacing: 5px;
+	border-collapse:collapse;
+}
+table.listado tr:hover td{
+	color:red;
+	/*font-size: 80%; Esto no hay que hacer por que cambia la maquetacion de la web*/
+	background-color: #888;
+}
+table.listado tr:first-child{
+	background-color:gold;
+	color:white;
+}
+table.listado tr:last-child{
+	background-color:silver;
+	color:white;
+}
+/*cuando no todos los hijos son del mismo tipo, por ejemplo puese haber un div que contenga una tabla, varios parrafos y otro div. Puede ser interesante usar algo parecido que es
+ first-child last-child*/
+ /*Si no es exactamente el primero o el ultimo, tenemos lo siguient*/
+ table.listado tr:nth-child(5){
+	 /*background-color: red;
+	 color: white;*/
+ }
+  table.listado tr:nth-child(2n + 3){
+	 background-color: red;
+	 color: white;
+ }
+ table.listado td:nth-child(3){
+	 text-align:right;
+ }
+ table.listado td, table.listado th{
+	 padding: .8em;
+ }
+ 
+ table.listado td:nth-child(3){
+	 width: 3em;
+ }
+ table.listado caption{
+	 border-radius:25px 25px 0 0;
+ }
