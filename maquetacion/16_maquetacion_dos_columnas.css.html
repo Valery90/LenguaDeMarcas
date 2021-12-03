@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	font-family: 'Batang';
+	color: #0000FF;
+}
+.sc2 {
+	color: #FF0000;
+}
+.sc5 {
+	font-weight: bold;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8080C0;
+}
+.sc8 {
+	font-weight: bold;
+}
+.sc9 {
+	color: #008000;
+}
+.sc10 {
+	font-weight: bold;
+	color: #0080FF;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc9">/**********************************************************
+
+    Receta para página en tres columnas
+    
+**********************************************************/</span><span class="sc0">
+</span><span class="sc9">/*
+    Ante todo, tendrás que definir en tu HTML una serie de divs convenientemente identificados.
+    Lee el código
+    1.-Empezamos por el ancho y los márgenes del contenedor.
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenedor</span><span class="sc5">{</span><span class="sc6">
+        width</span><span class="sc5">:</span><span class="sc8"> 90%</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 10px auto</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    2.-Colores y borde
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenedor</span><span class="sc5">{</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #fff</span><span class="sc5">;</span><span class="sc6">
+        color</span><span class="sc5">:</span><span class="sc8"> #333</span><span class="sc5">;</span><span class="sc6">
+        border</span><span class="sc5">:</span><span class="sc8"> 1px solid gray</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    3.-Si quieres mejorar la legilibilidad, aumenta la altura de línea.
+    Es una propiedad hereditaria.
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenedor</span><span class="sc5">{</span><span class="sc6"> line-height</span><span class="sc5">:</span><span class="sc8"> 130%</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    4.-Damos estilo a la cabecera 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">cabecera</span><span class="sc5">{</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> .5em</span><span class="sc5">;</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #ddd</span><span class="sc5">;</span><span class="sc6">
+        border-bottom</span><span class="sc5">:</span><span class="sc8"> 1px solid gray</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+    
+</span><span class="sc9">/*
+    5.-Eliminamos margen y padding del título en cabecera. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">cabecera</span><span class="sc1"> h1</span><span class="sc5">{</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    6.-Haz flotar la navegación izquierda. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navizquierda</span><span class="sc5">{</span><span class="sc6">
+        float</span><span class="sc5">:</span><span class="sc8"> left</span><span class="sc5">;</span><span class="sc6">
+        width</span><span class="sc5">:</span><span class="sc8"> 160px</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    7.-Le definimos margen y padding. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navizquierda</span><span class="sc5">{</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> 1em</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    8.-Márgenes para el div de contenido. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenido</span><span class="sc5">{</span><span class="sc6">
+        margin-left</span><span class="sc5">:</span><span class="sc8"> 200px</span><span class="sc5">;</span><span class="sc6">
+        border-left</span><span class="sc5">:</span><span class="sc8"> 1px solid gray</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    9.-Padding para el contenido. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenido</span><span class="sc5">{</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> 1em</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    10.-Ahora damos estilo al pie. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">pie</span><span class="sc5">{</span><span class="sc6">
+        clear</span><span class="sc5">:</span><span class="sc8"> both</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> .5em</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    11.-Damos color al pie. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">pie</span><span class="sc5">{</span><span class="sc6">
+        color</span><span class="sc5">:</span><span class="sc8"> #333</span><span class="sc5">;</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #ddd</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    12.-Le añadimos un borde. 
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">pie</span><span class="sc5">{</span><span class="sc6">
+        border-top</span><span class="sc5">:</span><span class="sc8"> 1px solid gray</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0">
+</span><span class="sc9">/*
+    13.-Queremos controlar nosotros los márgenes de párrafos y títulos.
+    Si no lo hacemos, se verá distinto en cada navegador    
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navizquierda</span><span class="sc1"> p </span><span class="sc5">{</span><span class="sc6"> margin</span><span class="sc5">:</span><span class="sc8"> 0 0 1em 0</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">contenido</span><span class="sc1"> h2 </span><span class="sc5">{</span><span class="sc6"> margin</span><span class="sc5">:</span><span class="sc8"> 0 0 .5em 0</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0">
+
+</span><span class="sc9">/*
+    14.-En algunas situaciones, se añade un máximo de ancho de línea. 
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">contenido</span><span class="sc1">  </span><span class="sc5">{</span><span class="sc6"> max-width</span><span class="sc5">:</span><span class="sc8"> 36em</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0">
+    
+    </span><span class="sc5">.</span><span class="sc2">info</span><span class="sc1"> p</span><span class="sc5">{</span><span class="sc6">text-align</span><span class="sc5">:</span><span class="sc8"> justify</span><span class="sc5">;}</span><span class="sc0">
+</span></div></body>
+</html>

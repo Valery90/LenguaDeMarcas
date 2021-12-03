@@ -1,0 +1,105 @@
+/**********************************************************
+
+	Receta para p�gina en tres columnas
+	
+**********************************************************/
+/*
+	Ante todo, tendr�s que definir en tu HTML una serie de divs convenientemente identificados.
+	Lee el c�digo
+	1.-Empezamos por el ancho y los m�rgenes del contenedor.
+*/
+	#contenedor{
+		width: 90%;
+		margin: 10px auto;
+	}
+/*
+	2.-Colores y borde
+*/
+	#contenedor{
+		background-color: red;
+		color: #333;
+		border: 1px solid gray;
+	}
+/*
+	3.-Si quieres mejorar la legilibilidad, aumenta la altura de l�nea.
+	Es una propiedad hereditaria.
+*/
+	#contenedor{ line-height: 130%; }
+/*
+	4.-Damos estilo a la cabecera 
+*/
+	#cabecera{
+		padding: .5em;
+		background-color: #ddd;
+		border-bottom: 1px solid gray;
+	}
+	
+/*
+	5.-Eliminamos margen y padding del t�tulo en cabecera. 
+*/
+	#cabecera h1{
+		padding: 0;
+		margin: 0;
+	}
+/*
+	6.-Haz flotar la navegaci�n izquierda. 
+*/
+	#navizquierda{
+		float: left;
+		width: 160px;
+	}
+/*
+	7.-Le definimos margen y padding. 
+*/
+	#navizquierda{
+		margin: 0;
+		padding: 1em;
+	}
+/*
+	8.-M�rgenes para el div de contenido. 
+*/
+	#contenido{
+		margin-left: 200px;
+		border-left: 1px solid gray;
+	}
+/*
+	9.-Padding para el contenido. 
+*/
+	#contenido{
+		padding: 1em;
+	}
+/*
+	10.-Ahora damos estilo al pie. 
+*/
+	#pie{
+		clear: both;
+		margin: 0;
+		padding: .5em;
+	}
+/*
+	11.-Damos color al pie. 
+*/
+	#pie{
+		color: #333;
+		background-color: #ddd;
+	}
+/*
+	12.-Le a�adimos un borde. 
+*/
+	#pie{
+		border-top: 1px solid gray;
+	}
+/*
+	13.-Queremos controlar nosotros los m�rgenes de p�rrafos y t�tulos.
+	Si no lo hacemos, se ver� distinto en cada navegador	
+*/
+	#navizquierda p { margin: 0 0 1em 0; }
+	#contenido h2 { margin: 0 0 .5em 0; }
+
+/*
+	14.-En algunas situaciones, se a�ade un m�ximo de ancho de l�nea. 
+*/
+
+	#contenido  { max-width: 36em; }
+	
+	.info p{text-align: justify;}
