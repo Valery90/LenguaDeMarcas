@@ -1,0 +1,66 @@
+para crear la galeria partimos de una serie de fotos redimensionadas.
+antes de nada, renombramos las fotos con ReNamer usando reglas tipo regex. cargamos todos los ficheros de NG.zip en el 
+programa y aplicamos la siguiente expresion 
+
+Buscar[0-9x_]+$
+Reemplazar <nada>
+
+[0-9x_]+$ quiere decir, que hay que buscar al final ($) uno o varios (+) del siguiente conjunto de caracteres:
+digitos (0-9) una x o un guion. De ese modo eliminamos coletillas del tipo caballo_pastando_800x600.jpg
+
+hay que marcar la casilla "ignorar extension"
+
+
+una vez de estar los ficheros renombrados podemos hacer dos cosas: redimensionar y guardar los caminos. como vamos
+a intentat mantener los caminos, empezamos por redimensionar con FastImageResizer.
+
+para que nos conserve la estructura de carpetas, creamos los thumbnsils en un subfolder (opciones de programa). en donde 
+se le indica como renombrar, pusimos %SRC%_peque. es decir, el nombre original del fichero seguido por _peque. 
+la extension es la del formato elegido.
+
+una vez de tener los ficheros y los thumbs necesitamos almacenar los cambios .
+desde una ventana MS-DOS, nos colocamos en la carpeta de las imagenes y tecleamos dir /B/S > caminos.txt.
+si tenemos ya creado el de los thumbs lo sacamos y luego volvemos a meter.
+
+ahora tocaria escribir los "cuadraditos de la galeria;"
+
+la primera posibilidad es una galeria usando <div> como base
+
+1.- quitamos la carpeta mas externa del camino, por que ya estamos en ella
+2.- hacemos la busqueda que nos separe la carpeta,  el nombre de la foto y la extension 
+(.*)/(.*)\.(.*)
+
+
+\1    \2    \3
+Acuaticas/air-buddle-underwater.jpg
+
+hacemos una prueba 
+Buscar \1 -> \2 -> \3
+
+vemos que funciona como esperabamos y lo deshacemos con cntrol + z 
+
+queremos obtener 
+<div class="peque">
+    <a href="peque">
+        <img src="Thumbs/Acuaticas/air-bubble-underwater_peque.jpg" alt="air-bubble-underwater">
+    </a>
+    <p class="pie">air-bubble-underwater</p>
+</div>
+
+Buscar esto: (.*)/(.*)\.(.*)
+Reemplazar <div class="peque">\n\t<a href="\1/\2.\3">\n\t\t<img src="Thumbs/\1/\2_peque.jpg"\n\t\talt="\2"\n\t\twidth="160" height="120"\n\t\t>\n\t</a>\n\t<p class="pie">\2</p>\n</div>
+
+quitamos los guiones de la linea del pie
+
+buscamos class="pie"(.*)-
+Reemplazar class="pie"\1<espacio>
+
+haz tu una galeria tipo html5
+<figure>
+    <a href="Acuaticas/air-bubble-underwater.jpg">
+        <img src="Thumbs/Acuaticas/air-bubble-underwater_peque.jpg" alt="air-bubble-underwater"> <figcaption>air-bubble-underwater.</figcaption>
+    </a>
+    <figcaption>air-bubble-underwater.</figcaption>
+</figure>
+
+<figure>\n\t<a href="\1/\2. \3">\n\t\t<img src="Thumbs/\1/\2_peque.jpg"\n\t\talt="\2"\n\t\twidth="160" height="120"\n\t\t>\n\t</a>\n\t<figcaption>\2</figcaption></figure>
