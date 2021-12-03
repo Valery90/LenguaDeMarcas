@@ -1,0 +1,28 @@
+/**********************************************************
+
+	Receta para primera letra mayúscula enorme
+	
+**********************************************************/
+/*
+	Ante todo, tendrás que usar una fuente escalable.
+	1.-Rodea la primera letra con un span y dale un clase.
+	2.-Dale un ancho a la letra y hazla flotar.
+	   Todo lo que flote y no sea una imagen necesita un ancho
+*/
+	.dropcap{
+		float: left;
+		width: .7em;
+		}
+/*
+	3.-Aumenta la fuente
+*/
+	.dropcap{ font-size: 4em; }
+/*
+	4.-Fija una altura de línea. Haz pruebas con Firebug 
+*/
+	.dropcap{ line-height: 83%; }
+	
+	p{text-align: justify;}
+/*
+	5.-Podrías plantearte cambiar la fuente. Algo tipo letra gótica. 
+*/
