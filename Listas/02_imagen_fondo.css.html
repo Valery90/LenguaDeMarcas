@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	font-family: 'Batang';
+	color: #0000FF;
+}
+.sc5 {
+	font-weight: bold;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8080C0;
+}
+.sc8 {
+	font-weight: bold;
+}
+.sc9 {
+	color: #008000;
+}
+.sc14 {
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc9">/**********************************************************
+
+    Receta para usar una imagen de fondo como viñeta
+    
+**********************************************************/</span><span class="sc0">
+</span><span class="sc9">/*
+    1.-Haz una lista no ordenada.
+    2.-Quita las "balas"
+*/</span><span class="sc0">
+
+    </span><span class="sc1">ul </span><span class="sc5">{</span><span class="sc6"> list-style-type</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    3.-Como lo estamos haciendo "a mano" quitamos borde y padding.
+       El problema es que son distintos en cada navegador.
+*/</span><span class="sc0">
+
+    </span><span class="sc1">ul </span><span class="sc5">{</span><span class="sc6"> 
+        padding</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    4.-Si queremos margen o padding, lo ponemos.
+*/</span><span class="sc0">
+
+    </span><span class="sc1">ul </span><span class="sc5">{</span><span class="sc6"> margin-left</span><span class="sc5">:</span><span class="sc8"> 1em</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    5.-Añade la imagen de fondo a cada elemento de lista.
+*/</span><span class="sc0">
+
+    </span><span class="sc1">li </span><span class="sc5">{</span><span class="sc6"> background-image</span><span class="sc5">:</span><span class="sc8">  url(</span><span class="sc14">'flecha_verde.jpg'</span><span class="sc8">)</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    6.-Haz que la imagen aparezca una sola vez.
+*/</span><span class="sc0">
+
+    </span><span class="sc1">li </span><span class="sc5">{</span><span class="sc6"> background-repeat</span><span class="sc5">:</span><span class="sc8"> no-repeat</span><span class="sc5">;</span><span class="sc6">  </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    7.-Posiciona la imagen a partir del vértice superior derecho del elemento de lista.
+    NOTA: Depende del icono HAZ PRUEBAS CON FIREBUG
+    En el tutorial venía .6em (positivo)    
+*/</span><span class="sc0">
+
+    </span><span class="sc1">li </span><span class="sc5">{</span><span class="sc6"> background-position</span><span class="sc5">:</span><span class="sc8"> 0 -0.6em</span><span class="sc5">;</span><span class="sc6">   </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    8.-Mueve el contenido del elemento para que no aparezca encima de la imagen.
+*/</span><span class="sc0">
+
+    </span><span class="sc1">li </span><span class="sc5">{</span><span class="sc6"> padding-left</span><span class="sc5">:</span><span class="sc8"> 2.6em</span><span class="sc5">;</span><span class="sc6">    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    VARIANTE: Versión alineada a derecha.
+    -&gt;Alinear ul a derecha
+    -&gt;Cambiar en background-position 0 por 100%
+    -&gt;Cambiar padding-left por padding-right
+*/</span><span class="sc0">  
+</span><span class="sc9">/*
+
+    ul
+    {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+    }
+
+    li
+    {
+        background-image: url('tick.png');
+        background-repeat: no-repeat;
+        background-position: 100% .4em;
+        padding-right: 2.6em;
+    }
+
+*/</span><span class="sc0">
+    
+</span><span class="sc9">/*
+    VARIANTE: Si la lista no está en una caja, podemos controlar su ancho fijando el de ul.
+*/</span><span class="sc0">  
+</span><span class="sc9">/*
+
+    ul{ width: 10em; }
+
+*/</span><span class="sc0">
+
+</span><span class="sc9">/*
+    VARIANTE: Mayor espaciado entre los elementos.
+*/</span><span class="sc0">  
+</span><span class="sc9">/*
+
+    li{ margin: 1em 0; }
+
+*/</span><span class="sc0">
+
+</span></div></body>
+</html>

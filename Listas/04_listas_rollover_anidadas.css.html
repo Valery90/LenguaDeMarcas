@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	font-family: 'Batang';
+	color: #0000FF;
+}
+.sc3 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.sc5 {
+	font-weight: bold;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8080C0;
+}
+.sc8 {
+	font-weight: bold;
+}
+.sc9 {
+	color: #008000;
+}
+.sc10 {
+	font-weight: bold;
+	color: #0080FF;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc9">/**********************************************************
+
+    Receta para listas rollover anidadas
+    
+**********************************************************/</span><span class="sc0">
+</span><span class="sc9">/*
+    1.-Haz una lista no ordenada de enlaces y métela en un &lt;div id="navegacion"&gt;. Dentro de ella define otras del mismo tipo entre las etiqutas &lt;li&gt; y &lt;/li&gt;
+    
+       Es importante por dos motivos:
+       -&gt;Generalmente este menú va en una caja en un lateral
+       -&gt;Queremos que el estilo no afecte a otras listas
+         Todos los selectores empezarán por #navegacion
+         
+    2.-Quita las "balas"
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> ul </span><span class="sc5">{</span><span class="sc6"> list-style-type</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    3.-Como lo estamos haciendo "a mano" quitamos borde y padding.
+       El problema es que son distintos en cada navegador.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> ul </span><span class="sc5">{</span><span class="sc6"> 
+        padding</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    4.-Haz que los enlaces, que son elementos de línea, se muestren como bloques.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> display</span><span class="sc5">:</span><span class="sc8"> block</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    5.-Añade un color de fondo (y uno de texto que permita leer).
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> 
+        color</span><span class="sc5">:</span><span class="sc8"> #FFF</span><span class="sc5">;</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #036</span><span class="sc5">;</span><span class="sc6"> 
+    </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    6.-Dale una anchura fija a los enlaces.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a  </span><span class="sc5">{</span><span class="sc6"> width</span><span class="sc5">:</span><span class="sc8"> 9em</span><span class="sc5">;</span><span class="sc6">   </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    7.-Añade un padding 
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> padding</span><span class="sc5">:</span><span class="sc8"> 3px 12px 3px 8px</span><span class="sc5">;</span><span class="sc6">    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    8.-Quita el subrayado de los enlaces.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> text-decoration</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6">     </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    9.-Cambia color y fondo para el estado hover.
+       Recuerda que en CSS3 se pone ::
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a</span><span class="sc5">:</span><span class="sc3">hover</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6"> 
+        background-color</span><span class="sc5">:</span><span class="sc8"> #369</span><span class="sc5">;</span><span class="sc6">
+        color</span><span class="sc5">:</span><span class="sc8"> #FFF</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    10.-Separa un poco los elementos de lista.
+        Hay problemas en algunos navegadores si se intenta hacer esto
+        mediante márgenes. Es mejor jugar con bordes.
+        Ponemos todos los márgener a cero y así se verá igual en todos los navegadores.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> li </span><span class="sc5">{</span><span class="sc6">  
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">    
+        border-bottom</span><span class="sc5">:</span><span class="sc8"> 1px solid #fff</span><span class="sc5">;</span><span class="sc6">  
+    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    11.-Sólo queda distinguir las listas visualmente.
+        Nos copiamos las reglas anteriores y las modificamos para las listas internas.
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> li li a</span><span class="sc5">{</span><span class="sc6">
+        display</span><span class="sc5">:</span><span class="sc8"> block</span><span class="sc5">;</span><span class="sc6">
+        color</span><span class="sc5">:</span><span class="sc8"> #FFF</span><span class="sc5">;</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #69C</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc9">/* cambiamos el color de fondo */</span><span class="sc6">
+        width</span><span class="sc5">:</span><span class="sc8"> 9em</span><span class="sc5">;</span><span class="sc6">
+        padding</span><span class="sc5">:</span><span class="sc8"> 3px 3px 3px 17px</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc9">/* izquierda + derecha=20 como en la anterior */</span><span class="sc6">
+        text-decoration</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6">
+        border-bottom</span><span class="sc5">:</span><span class="sc8"> 1px solid #fff</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+</span><span class="sc9">/*
+    12.-Podemos resaltar la lista más externa en negrita.
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a</span><span class="sc5">{</span><span class="sc6">
+        font-weight</span><span class="sc5">:</span><span class="sc8"> bold</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+</span><span class="sc9">/*
+    13.-Hay que definir otra regla para que las listas internas no salgan en negrita.
+*/</span><span class="sc0">
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> li li a</span><span class="sc5">{</span><span class="sc6">
+        font-weight</span><span class="sc5">:</span><span class="sc8"> normal</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+</span></div></body>
+</html>

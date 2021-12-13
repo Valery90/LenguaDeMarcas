@@ -1,0 +1,114 @@
+/**********************************************************
+
+	Receta para lista simple rollover
+	
+**********************************************************/
+/*
+	1.-Haz una lista no ordenada de enlaces y métela en un <div id="navegacion">.
+	
+	   Es importante por dos motivos:
+	   ->Generalmente este menú va en una caja en un lateral
+	   ->Queremos que el estilo no afecte a otras listas
+	     Todos los selectores empezarán por #navegacion
+		 
+	2.-Quita las "balas"
+*/
+
+	#navegacion ul { list-style-type: none; } 
+
+/*
+	3.-Como lo estamos haciendo "a mano" quitamos borde y padding.
+	   El problema es que son distintos en cada navegador.
+*/
+
+	#navegacion ul { 
+		padding: 0;
+		margin: 0;
+	} 
+	
+/*
+	4.-Haz que los enlaces, que son elementos de línea, se muestren como bloques.
+*/
+
+	#navegacion a { display: block; } 
+	
+/*
+	5.-Añade un color de fondo (y uno de texto que permita leer).
+*/
+
+	#navegacion a { 
+		color: #FFF;
+		background-color: #036; 
+	} 
+
+/*
+	6.-Dale una anchura fija a los enlaces.
+*/
+
+	#navegacion a  { width: 9em;   } 
+	
+/*
+	7.-Añade un padding	
+*/
+
+	#navegacion a { padding: .2em .8em;   } 
+	
+/*
+	8.-Quita el subrayado de los enlaces.
+*/
+
+	#navegacion a { text-decoration: none;     } 
+	
+/*
+	9.-Cambia color y fondo para el estado hover.
+	   Recuerda que en CSS3 se pone ::
+*/
+
+	#navegacion a:hover { 
+		background-color: #369;
+		color: #FFF;
+	} 
+
+/*
+	10.-Separa un poco los elementos de lista.
+*/
+
+	#navegacion li {  margin: 0 0 .2em 0;     } 
+	
+	/*
+	VARIANTE: Resaltado del elemento en el que estamos.
+	Supongamos que hemos pulsado "Acción".
+	Nos cambiamos de página pero sigue apareciendo el menú.
+	Parece razonable que se nos indique visualmente en qué sección estamos.
+	->Pon en el <li> de acción id="activo" 
+	->Cambia el color de fondo del link
+	
+	#activo a { background-color: #600; }
+	
+	NOTA: Esta es la propuesta del tutorial. 
+	Si en la misma página tenemos más de un menú podríamos acabar con más de un elemento con el mismo identificador. 
+	Es mejor una clase.
+	*/	
+	
+	/*
+	VARIANTE: Uso de bordes.
+	Se pueden conseguir efectos vistosos usando bordes.
+	Por ejemplo, podemos invertir los estilos y/o colores
+	
+	#navegacion a { 
+		border-top: 1px solid #fff;
+		border-left: 1px solid #fff;
+		border-right: 1px solid #036;
+		border-bottom: 1px solid #036;
+	} 
+	
+	#navegacion a:hover { 
+		border-top: 1px solid #036;
+		border-left: 1px solid #036;
+		border-right: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	} 
+	
+	
+	*/	
+	

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	font-family: 'Batang';
+	color: #0000FF;
+}
+.sc3 {
+	font-weight: bold;
+	color: #FF8000;
+}
+.sc5 {
+	font-weight: bold;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8080C0;
+}
+.sc8 {
+	font-weight: bold;
+}
+.sc9 {
+	color: #008000;
+}
+.sc10 {
+	font-weight: bold;
+	color: #0080FF;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc9">/**********************************************************
+
+    Receta para lista simple rollover
+    
+**********************************************************/</span><span class="sc0">
+</span><span class="sc9">/*
+    1.-Haz una lista no ordenada de enlaces y métela en un &lt;div id="navegacion"&gt;.
+    
+       Es importante por dos motivos:
+       -&gt;Generalmente este menú va en una caja en un lateral
+       -&gt;Queremos que el estilo no afecte a otras listas
+         Todos los selectores empezarán por #navegacion
+         
+    2.-Quita las "balas"
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> ul </span><span class="sc5">{</span><span class="sc6"> list-style-type</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    3.-Como lo estamos haciendo "a mano" quitamos borde y padding.
+       El problema es que son distintos en cada navegador.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> ul </span><span class="sc5">{</span><span class="sc6"> 
+        padding</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+        margin</span><span class="sc5">:</span><span class="sc8"> 0</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    4.-Haz que los enlaces, que son elementos de línea, se muestren como bloques.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> display</span><span class="sc5">:</span><span class="sc8"> block</span><span class="sc5">;</span><span class="sc6"> </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    5.-Añade un color de fondo (y uno de texto que permita leer).
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> 
+        color</span><span class="sc5">:</span><span class="sc8"> #FFF</span><span class="sc5">;</span><span class="sc6">
+        background-color</span><span class="sc5">:</span><span class="sc8"> #036</span><span class="sc5">;</span><span class="sc6"> 
+    </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    6.-Dale una anchura fija a los enlaces.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a  </span><span class="sc5">{</span><span class="sc6"> width</span><span class="sc5">:</span><span class="sc8"> 9em</span><span class="sc5">;</span><span class="sc6">   </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    7.-Añade un padding 
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> padding</span><span class="sc5">:</span><span class="sc8"> .2em .8em</span><span class="sc5">;</span><span class="sc6">   </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    8.-Quita el subrayado de los enlaces.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a </span><span class="sc5">{</span><span class="sc6"> text-decoration</span><span class="sc5">:</span><span class="sc8"> none</span><span class="sc5">;</span><span class="sc6">     </span><span class="sc5">}</span><span class="sc0"> 
+    
+</span><span class="sc9">/*
+    9.-Cambia color y fondo para el estado hover.
+       Recuerda que en CSS3 se pone ::
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> a</span><span class="sc5">:</span><span class="sc3">hover</span><span class="sc1"> </span><span class="sc5">{</span><span class="sc6"> 
+        background-color</span><span class="sc5">:</span><span class="sc8"> #369</span><span class="sc5">;</span><span class="sc6">
+        color</span><span class="sc5">:</span><span class="sc8"> #FFF</span><span class="sc5">;</span><span class="sc6">
+    </span><span class="sc5">}</span><span class="sc0"> 
+
+</span><span class="sc9">/*
+    10.-Separa un poco los elementos de lista.
+*/</span><span class="sc0">
+
+    </span><span class="sc5">#</span><span class="sc10">navegacion</span><span class="sc1"> li </span><span class="sc5">{</span><span class="sc6">  margin</span><span class="sc5">:</span><span class="sc8"> 0 0 .2em 0</span><span class="sc5">;</span><span class="sc6">     </span><span class="sc5">}</span><span class="sc0"> 
+    
+    </span><span class="sc9">/*
+    VARIANTE: Resaltado del elemento en el que estamos.
+    Supongamos que hemos pulsado "Acción".
+    Nos cambiamos de página pero sigue apareciendo el menú.
+    Parece razonable que se nos indique visualmente en qué sección estamos.
+    -&gt;Pon en el &lt;li&gt; de acción id="activo" 
+    -&gt;Cambia el color de fondo del link
+    
+    #activo a { background-color: #600; }
+    
+    NOTA: Esta es la propuesta del tutorial. 
+    Si en la misma página tenemos más de un menú podríamos acabar con más de un elemento con el mismo identificador. 
+    Es mejor una clase.
+    */</span><span class="sc0">  
+    
+    </span><span class="sc9">/*
+    VARIANTE: Uso de bordes.
+    Se pueden conseguir efectos vistosos usando bordes.
+    Por ejemplo, podemos invertir los estilos y/o colores
+    
+    #navegacion a { 
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #036;
+        border-bottom: 1px solid #036;
+    } 
+    
+    #navegacion a:hover { 
+        border-top: 1px solid #036;
+        border-left: 1px solid #036;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    } 
+    
+    
+    */</span><span class="sc0">  
+    
+</span></div></body>
+</html>

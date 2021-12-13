@@ -1,0 +1,68 @@
+/**********************************************************
+
+	Receta para lista simple rollover
+	
+**********************************************************/
+/*
+	1.-Haz una lista no ordenada de enlaces y métela en un <div id="navegacion">.
+			 
+	2.-Quita las "balas"
+*/
+
+	#navegacion ul { list-style-type: none; } 
+
+/*
+	3.-Como lo estamos haciendo "a mano" quitamos margen y padding.
+	   El problema es que son distintos en cada navegador.
+*/
+
+	#navegacion ul { 
+		padding: 0;
+		margin: 0;
+	} 
+	
+/*
+	4.-Haz que los elementos de lista, que son elementos de bloque, se muestren como elementos de línea.
+*/
+
+	#navegacion ul li { display: inline; } 
+
+/*
+	5.-Quita el subrayado de los enlaces.
+*/
+
+	#navegacion ul li a { text-decoration: none;     } 
+	
+/*
+	7.-Añade un padding	a los elementos de lista
+*/
+
+	#navegacion ul li a { padding:  .2em 1em;  } 
+	
+	
+/*
+	8.-Añade un color de fondo (y uno de texto que permita leer).
+*/
+
+	#navegacion a { 
+		color: #FFF;
+		background-color: #036; 
+	} 
+
+/*
+	9.-Cambia color y fondo para el estado hover.
+	   Recuerda que en CSS3 se pone ::
+*/
+
+	#navegacion a:hover { 
+		background-color: #369;
+		color: #FFF;
+	} 
+
+	
+/*
+	10.-Centra la lista.
+*/
+
+	#navegacion ul { text-align: center;  } 
+	

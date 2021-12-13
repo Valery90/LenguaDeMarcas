@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" >
+	<style type="text/css" media="screen">
+		body
+		{
+			margin: 20px;
+			padding: 0;
+			font: normal 85% arial, helvetica, sans-serif;
+			color: #000;
+			background-color: #fff;
+		}
+		
+		div.info {
+			background-color: #FFFFC3;
+			border: 1px solid black;
+			padding: 10px;
+			font-size: 120%;
+		}
+		
+		div.info p{
+			text-align: justify;
+		}
+		
+</style>
+        <title>Listas: Nociones b&aacute;sicas </title>
+    </head>
+    <body>
+	<h1>Listas: Nociones b&aacute;sicas </h1>
+	<div class="info">
+	<p>En general se suelen usar tres propiedades para modificar las listas: <code>list-style-type</code>, <code>list-style-position</code> y <code>list-style-image</code></p>
+	</div>
+	<p>Pongamos de lista de ejemplo los posibles valores de <code>list-style-type</code></p>
+	<ol>
+		<li>armenian</li>
+		<li>circle</li>
+		<li>cjk-ideographic</li>
+		<li>decimal</li>
+		<li>decimal-leading-zero</li>
+		<li>disc</li>
+		<li>georgian</li>
+		<li>hebrew</li>
+		<li>hiragana</li>
+		<li>hiragana-iroha</li>
+		<li>inherit</li>
+		<li>katakana</li>
+		<li>katakana-iroha</li>
+		<li>lower-alpha</li>
+		<li>lower-greek</li>
+		<li>lower-latin</li>
+		<li>lower-roman</li>
+		<li>none</li>
+		<li>square</li>
+		<li>upper-alpha</li>
+		<li>upper-latin</li>
+		<li>upper-roman</li>
+	</ol>
+	<div class="info">
+	<p>Define en firebug la regla <code>ol {   list-style-type: upper-alpha;}</code> y mira las posibilidades.</p>
+	<p>A los s&iacute;mbolos que aparecen a la izquierda de cada elemento se les llama en ingl&eacute;s <em>bullet</em>(bala) y pueden cargarse desde un fichero.</p>
+	<p>Si quieres ver las consecuencias de las balas, define la regla <code>ol {   list-style-image: url('bala.jpeg');}</code>.</p>
+	<p>Por último, podemos poner las viñetas en dos posiciones, dentro o fuera <code>ol { list-style-position: outside; }</code> (el valor por defecto es inside) .</p>
+	<p>Busca en w3schools los posibles atributos de &lt;ol&gt;, &lt;ul&gt; y &lt;li&gt;. Observa que atributos que antes se usaban están desaconsejados o directamente no funcionan en HTML5. Lo que sí es muy útil y hay gente que no sabe que existe son el atributo <code>start</code> de <code>&lt;ol&gt;</code> y el atributo <code>value</code> de <code>&lt;li&gt;</code></p>
+	</div>
+	
+    </body>
+</html>

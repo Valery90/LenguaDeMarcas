@@ -1,0 +1,98 @@
+/**********************************************************
+
+	Receta para usar una imagen de fondo como viñeta
+	
+**********************************************************/
+/*
+	1.-Haz una lista no ordenada.
+	2.-Quita las "balas"
+*/
+
+	ul { list-style-type: none; } 
+
+/*
+	3.-Como lo estamos haciendo "a mano" quitamos borde y padding.
+	   El problema es que son distintos en cada navegador.
+*/
+
+	ul { 
+		padding: 0;
+		margin: 0;
+	} 
+	
+/*
+	4.-Si queremos margen o padding, lo ponemos.
+*/
+
+	ul { margin-left: 1em; } 
+	
+/*
+	5.-Añade la imagen de fondo a cada elemento de lista.
+*/
+
+	li { background-image:  url('flecha_verde.jpg'); } 
+
+/*
+	6.-Haz que la imagen aparezca una sola vez.
+*/
+
+	li { background-repeat: no-repeat;  } 
+	
+/*
+	7.-Posiciona la imagen a partir del vértice superior derecho del elemento de lista.
+	NOTA: Depende del icono HAZ PRUEBAS CON FIREBUG
+	En el tutorial venía .6em (positivo)	
+*/
+
+	li { background-position: 0 -0.6em;   } 
+	
+/*
+	8.-Mueve el contenido del elemento para que no aparezca encima de la imagen.
+*/
+
+	li { padding-left: 2.6em;    } 
+	
+/*
+	VARIANTE: Versión alineada a derecha.
+	->Alinear ul a derecha
+	->Cambiar en background-position 0 por 100%
+	->Cambiar padding-left por padding-right
+*/	
+/*
+
+	ul
+	{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		text-align: right;
+	}
+
+	li
+	{
+		background-image: url('tick.png');
+		background-repeat: no-repeat;
+		background-position: 100% .4em;
+		padding-right: 2.6em;
+	}
+
+*/
+	
+/*
+	VARIANTE: Si la lista no está en una caja, podemos controlar su ancho fijando el de ul.
+*/	
+/*
+
+	ul{ width: 10em; }
+
+*/
+
+/*
+	VARIANTE: Mayor espaciado entre los elementos.
+*/	
+/*
+
+	li{ margin: 1em 0; }
+
+*/
+
