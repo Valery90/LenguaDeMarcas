@@ -4,7 +4,7 @@
 	
 **********************************************************/
 /*
-	1.-Haz una lista no ordenada de enlaces y métela en un <div id="navegacion">.
+	1.-Haz una lista no ordenada de enlaces y mï¿½tela en un <div id="navegacion">.
 			 
 	2.-Quita las "balas"
 */
@@ -22,7 +22,7 @@
 	} 
 	
 /*
-	4.-Haz que los elementos de lista, que son elementos de bloque, se muestren como elementos de línea.
+	4.-Haz que los elementos de lista, que son elementos de bloque, se muestren como elementos de lï¿½nea.
 */
 
 	#navegacion ul li { display: inline; } 
@@ -34,14 +34,14 @@
 	#navegacion ul li a { text-decoration: none;     } 
 	
 /*
-	7.-Añade un padding	a los elementos de lista
+	7.-Aï¿½ade un padding	a los elementos de lista
 */
 
 	#navegacion ul li a { padding:  .2em 1em;  } 
 	
 	
 /*
-	8.-Añade un color de fondo (y uno de texto que permita leer).
+	8.-Aï¿½ade un color de fondo (y uno de texto que permita leer).
 */
 
 	#navegacion a { 
@@ -65,4 +65,6 @@
 */
 
 	#navegacion ul { text-align: center;  } 
+
+	#navegacion a { border-radius: 10px 10px 0 0;  } 
 	

@@ -4,12 +4,12 @@
 	
 **********************************************************/
 /*
-	1.-Haz una lista no ordenada de enlaces y métela en un <div id="navegacion">.
+	1.-Haz una lista no ordenada de enlaces y mï¿½tela en un <div id="navegacion">.
 	
 	   Es importante por dos motivos:
-	   ->Generalmente este menú va en una caja en un lateral
+	   ->Generalmente este menï¿½ va en una caja en un lateral
 	   ->Queremos que el estilo no afecte a otras listas
-	     Todos los selectores empezarán por #navegacion
+	     Todos los selectores empezarï¿½n por #navegacion
 		 
 	2.-Quita las "balas"
 */
@@ -27,13 +27,13 @@
 	} 
 	
 /*
-	4.-Haz que los enlaces, que son elementos de línea, se muestren como bloques.
+	4.-Haz que los enlaces, que son elementos de lï¿½nea, se muestren como bloques.
 */
 
 	#navegacion a { display: block; } 
 	
 /*
-	5.-Añade un color de fondo (y uno de texto que permita leer).
+	5.-Aï¿½ade un color de fondo (y uno de texto que permita leer).
 */
 
 	#navegacion a { 
@@ -42,13 +42,13 @@
 	} 
 
 /*
-	6.-Dale una anchura fija a los enlaces.
+	6.-Dale una anchura fija a los enlaces. en funcion de la fuente 
 */
 
 	#navegacion a  { width: 9em;   } 
 	
 /*
-	7.-Añade un padding	
+	7.-Aï¿½ade un padding	
 */
 
 	#navegacion a { padding: .2em .8em;   } 
@@ -77,16 +77,16 @@
 	
 	/*
 	VARIANTE: Resaltado del elemento en el que estamos.
-	Supongamos que hemos pulsado "Acción".
-	Nos cambiamos de página pero sigue apareciendo el menú.
-	Parece razonable que se nos indique visualmente en qué sección estamos.
-	->Pon en el <li> de acción id="activo" 
+	Supongamos que hemos pulsado "Acciï¿½n".
+	Nos cambiamos de pï¿½gina pero sigue apareciendo el menï¿½.
+	Parece razonable que se nos indique visualmente en quï¿½ secciï¿½n estamos.
+	->Pon en el <li> de acciï¿½n id="activo" 
 	->Cambia el color de fondo del link
 	
 	#activo a { background-color: #600; }
 	
 	NOTA: Esta es la propuesta del tutorial. 
-	Si en la misma página tenemos más de un menú podríamos acabar con más de un elemento con el mismo identificador. 
+	Si en la misma pï¿½gina tenemos mï¿½s de un menï¿½ podrï¿½amos acabar con mï¿½s de un elemento con el mismo identificador. 
 	Es mejor una clase.
 	*/	
 	
@@ -111,4 +111,5 @@
 	
 	
 	*/	
+
 	

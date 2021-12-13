@@ -1,0 +1,44 @@
+
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  display: inline;
+}
+
+ul li a{
+  text-decoration: none;
+  color:navy;
+}
+
+ul li a:hover, a.activo{
+  border-bottom: 1px solid royalblue;
+  font-weight: bold;
+}
+
+/*
+ul{
+    list-style-type: none;
+  }
+  
+  ul li{
+    display: inline-block;
+    width:4.5em;
+  }
+  
+  ul li a {
+      display:block;
+      text-decoration:none;
+      color:navy;
+  }
+  
+  ul li a:hover{
+    border-bottom: 1px solid royalblue;
+  }*/
+  
+  /*
+  Ponerle aspecto de botones (son cajas) posiblemente con gradientes
+  
+  Pon a uno de los elementos a la clase "activo" y haz que tenga el mismo CSS que la "hover"
+  */
