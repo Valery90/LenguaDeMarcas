@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios en HTML4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios en HTML4</title>
 </head>
 
 <body>
-    <!--
+        <!--
 Un formulario es la forma que tenemos de enviar datos a través de una página web. Se codifican mediante la etiqueta form.
 
 Tiene al menos dos atributos
@@ -39,20 +39,21 @@ atributos de input:
 		search
 	
 -->
-    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
-        <label for="nombre">Nombre:</label><input type="text" id="nombre" name="izena"><br>
-        <label>Apellido:<input type="text" name="apellido"></label><br>
-        <label for="edad">Edad:</label><input type="text" id="edad" name="edad" size="3" maxlength="2"><br>
-        <!--
+        <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+                <label for="nombre">Nombre:</label><input type="text" id="nombre" name="izena"><br>
+                <label>Apellido:<input type="text" name="apellido"></label><br>
+                <label for="edad">Edad:</label><input type="text" id="edad" name="edad" size="3" maxlength="2"><br>
+                <!--
 En la mayoría de campos, value es un valor por defecto que ya consta
 -->
-        <label for="provincia">Provincia:</label><input type="text" id="provincia" name="provincia" value="Bizkaia"><br>
-        <!--
+                <label for="provincia">Provincia:</label><input type="text" id="provincia" name="provincia"
+                        value="Bizkaia"><br>
+                <!--
 Para contraseñas solemos usar el campo password.
 Por un lado el navegador oculta el input y por otro suele recordar o dar opción a recordar.
 -->
-        Contraseña:<input type="password" name="clave"><br>
-        <!--
+                Contraseña:<input type="password" name="clave"><br>
+                <!--
 
 Los campos checckbox son un poco especiales:
 Si están marcados, aparecen con el valor "on" y si no están marcados, no aparecen. 
@@ -62,10 +63,10 @@ Se puede modificar el valor con value pero no tiene demasiado sentido.
 Podemos usar el atributo checked para que aparezca marcado de antemano
 
 -->
-        <input type="checkbox" name="spam" id="spam" checked><label for="spam">Por favor, envíenme correo
-            basura</label><br>
+                <input type="checkbox" name="spam" id="spam" checked><label for="spam">Por favor, envíenme correo
+                        basura</label><br>
 
-        <!--
+                <!--
 Botones de Radio
 
 Para que varios botones sean un grupo, es decir, que solo se pueda seleccionar uno, tienen que tener el mismo name.
@@ -74,13 +75,15 @@ Si no ponemos a cada uno un value, todos llegarán al servidor como "on".
 
 Si ponemos id, deben ser diferentes, porque son tres nodos diferentes.
 
-Si usamos label con el texto asociado, se marca al hacer click en el texto
+Si usamos label con el texto asociado, se marca al hacer click en el texto.
+
+Se puede dar un valor por defecto con checked
 -->
-        Nivel de estudios?
-        <input type="radio" name="estudios" value="basico" id="bajo">Bajo
-        <input type="radio" name="estudios" value="intermedio" id="medio">Medio
-        <input type="radio" name="estudios" value="superior" id="alto"><label for="alto">Alto</label><br>
-        <!--
+                Nivel de estudios?
+                <input type="radio" name="estudios" value="basico" id="bajo">Bajo
+                <input type="radio" name="estudios" value="intermedio" id="medio">Medio
+                <input type="radio" name="estudios" value="superior" id="alto"><label for="alto">Alto</label><br>
+                <!--
 El tipo file permite subir ficheros.
 Siempre con POST
 
@@ -91,27 +94,88 @@ accept="audio/*"
 accept="video/*"
 accept="image/*"
 -->
-        <input type="file" name="foto" accept="image/*"><br>
-        <!--
+                <input type="file" name="foto" accept="image/*"><br>
+                <!--
 Campos ocultos. Especialmenta para ocultar claves primarias en actualizaciones
 -->
-        <input type="hidden" name="oculto" value="elorrieta">
-        <!--
+                <input type="hidden" name="oculto" value="elorrieta">
+                <!--
 Hay dos alternativas un poco txungas
 Atributo disabled
 Campo readonly
 -->
-        <input type="text" name="oculto" value="elorrieta" disabled>
-        <!--
+                <input type="text" name="oculto" value="elorrieta" disabled><br>
+                <!--
+cajas de búsqueda
+-->
+                Búsqueda:<input type="search" name="busqueda"><br>
+
+                <!--
+Listas desplegables o DROP DOWN LIST.
+Se codifican con select y option
+Podemos poner SELECTED en una de las opciones
+-->
+                Ciclo que estudias:
+                <select name="ciclo">
+                        <option>Administración de Sistemas Informáticos y en Red</option>
+                        <option>Desarrollo de Aplicaciones Multiplataforma</option>
+                        <option selected>Desarrollo de Aplicaciones Web</option>
+                </select><br>
+                <!--
+Versión en la que enviamos la clave primaria de las provincias 
+-->
+                Provincia de residencia:
+                <select name="prov_residencia">
+                        <option value="0">--Selecciona tu provincia de residencia--</option>
+                        <option value="01">Álava/Araba</option>
+                        <option value="48">Bizkaia</option>
+                        <option value="20">Gipuzkoa</option>
+                </select><br>
+                <!--
+A un control select se le puede poner multiple y permitirá seleccionar varios valores 
+-->
+                Ciclo que estudias:
+                <select name="ciclo_multiple[]" multiple>
+                        <option value="ASIR">Administración de Sistemas Informáticos y en Red</option>
+                        <option value="DAM">Desarrollo de Aplicaciones Multiplataforma</option>
+                        <option selected value="DAW">Desarrollo de Aplicaciones Web</option>
+                </select><br>
+                <!--
+Se puede hacer algo similar con varios checkboxes combinados
+-->
+                <fieldset>
+                        <legend>Marca las pelis que hayas visto</legend>
+                        <input type="checkbox" name="peli[]" id="peli1" value="la-naranja-mecanica"><label
+                                for="peli1">La naranja Mecánica</label><br>
+                        <input type="checkbox" name="peli[]" id="peli2" value="metropolis"><label
+                                for="peli2">Metrópolis</label><br>
+                        <input type="checkbox" id="peli3" name="peli[]" value="batman"><label
+                                for="peli3">Batman</label><br>
+                </fieldset>
+                <!--
+Podemos mejorar el interfaz de select usando la etiqueta optgroup
+-->
+                Selecciona un ciclo
+                <select name="otro_ciclo_mas">
+                        <optgroup label="Medio">
+                                <option value="SMR">Sistemas Microinformáticos y Redes</option>
+                        </optgroup>
+                        <optgroup label="Superior">
+                                <option value="ASIR">Administración de Sistemas Informáticos y en Red</option>
+                                <option value="DAM">Desarrollo de Aplicaciones Multiplataforma</option>
+                                <option value="DAW">Desarrollo de Aplicaciones Web</option>
+                        </optgroup>
+                        <select>
+                                <!--
 En el caso de un botón sumbit, el atributo value es el texto que sale
 -->
-        <input type="submit" value="Registrarme">
-        <!--
+                                <input type="submit" value="Registrarme">
+                                <!--
 Podemos poner opcionalmente un botón de reset, que vacía los campos o si tiemem valor por defecto, se lo pone.
 -->
-        <input type="reset">
+                                <input type="reset">
 
-    </form>
+        </form>
 </body>
 
 </html>
