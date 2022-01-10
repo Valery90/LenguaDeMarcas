@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos de formularios en HTML5</title>
+</head>
+
+<body>
+    <h1>Campos y atributos nuevos en HTML5</h1>
+    <h2>Campos</h2>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Color</legend>
+            <input type="color" name="color" value="#435ed8">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Campo numérico</legend>
+            Un número entero:<input type="number" name="numero1"><br>
+            Un entero entre 20 y 25
+            <input type="number" name="numero2" min="20" max="25"><br>
+            Un entero que crece de 10 en 10:<input type="number" name="numero3" step="10"><br>
+            <!--
+   El siguiente atributo sirve para cualquier tipo de campo
+   -->
+            Un entero obligatorio:<input type="number" name="numero4" required><br>
+
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Hora</legend>
+            <input type="time" name="hora" value="20:15">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Fechas</legend>
+            <input type="date" name="date"><br>
+            <input type="datetime-local" name="datetime-local">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Rangos</legend>
+            <!--
+       Si no ponemos nada, el campo va de 1 a 100
+       -->
+            Rango de 0 a 100:<input type="range" name="rango1"
+                oninput="this.nextElementSibling.value = this.value"><output></output><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
