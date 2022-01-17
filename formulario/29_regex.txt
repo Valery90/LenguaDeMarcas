@@ -67,4 +67,4 @@ un telefono separado por espacios o guiones
 ^\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
 para que no admita sepadadpres mezclados 
 RETROREFERENCIAS BACK REFERENCE
-^\d\d([ \-])?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
+^\d\d([ \-])?\d\1?\d\d\1?\d\1?\d\1?\d\d$
