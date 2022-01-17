@@ -1,0 +1,70 @@
+
+https://regex101.com/
+Pruebas de REGEX en regex101
+Copiamos algo de texto y hacemos unas pruebas de caracteres
+
+\s quiere decir un solo espacio no varios espacios 
+\s......Whitespace
+\s......No Whitespace
+\d......Digito
+\D......No Digito
+\w......caracter parte de una palabra: letras de a z mayuscula o minuscula, digitos, guion_bajo
+\W......Algo que no valga en una palabra
+
+https://www.techonthenet.com/ascii/chart.php
+\x27 caracter27 hexadecimal, o sea 39, o sea comilla simple
+
+\x2F es el 2f hexadecimal, o sea 47, o sea slash
+ \o057 057 octal, que de nuevo es 047
+
+ -------------------------------------------------
+ Rangos
+ llamamos rango cosas que van entre corchetes[]
+ [aeiou]...Vocal minuscula, con la opcion i tambien mayuscula 
+ [aeiouAEIOU]...Vocal mayuscula o miniscula
+ [aeiouáéíóú]...Vocal posiblemene con acentos 
+
+ Segmentos 
+ es algo que une dos letras
+ [a-z]
+ [a-zA-Z0-9]
+
+ hay formas distintas de objetener lo mismo 
+ \d ..... [0-9]
+ \w ..... [a-zA-Z0-9_]
+
+ Cuantificadores 
+ hay tres cuantificadores 
+
+ * el asterisco quiere decir 0 o mas 
+ + el mas quiere decir 1 o mas 
+ ? la interrogacion quiere decir 0 o 1 "a lo mejor"
+
+ i.*e que pille el pirmer i y termine cuando encuentre una el
+ i.+e 
+ las?
+
+ Alternativa uso de OR
+ l(a|o) estamos diciendo por ejemplo alumn(o|a)s?
+ 
+ 
+ 
+ un telefono 
+ Un codigo postal :  ^(0[1-9]|[1-4][0-9]|50)\d\d\d$
+ ^(?:0[1-9]|[1-4][0-9]|50)\d\d\d$ version que no captura  
+ Un codigo postal con punto
+ ^(?:0[1-9]|[1-4][0-9]|50).?\d\d\d$ para que me pile codigo postales con punto
+
+un telefono separado por espacios
+ ^\d\d\s?\d\s?\d\d\s?\d\s?\d\s?\d\d$ 
+ 665341255
+665-34-12-55
+655 34 12 55
+94 441 25 89
+655 341 255
+
+un telefono separado por espacios o guiones 
+^\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
+para que no admita sepadadpres mezclados 
+RETROREFERENCIAS BACK REFERENCE
+^\d\d([ \-])?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
