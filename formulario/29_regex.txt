@@ -57,7 +57,7 @@ https://www.techonthenet.com/ascii/chart.php
 
 un telefono separado por espacios
  ^\d\d\s?\d\s?\d\d\s?\d\s?\d\s?\d\d$ 
- 665341255
+665341255
 665-34-12-55
 655 34 12 55
 94 441 25 89
@@ -68,3 +68,167 @@ un telefono separado por espacios o guiones
 para que no admita sepadadpres mezclados 
 RETROREFERENCIAS BACK REFERENCE
 ^\d\d([ \-])?\d\1?\d\d\1?\d\1?\d\1?\d\d$
+---------------------------------------------
+partiendo de un telefono separado por espacios o guiones 
+^\d\d([ \-])?\d\1?\d\d\1?\d\1?\d\1?\d\d$
+definiremos una transformacion 
+lo primero es hacer grupos encerrando entre parentesis lo que nos interesa conservar
+^(\d\d)[ \-]?\d\1?\d\d\1?\d\1?\d\1?\d\d$
+
+a la hora de transformar hay dos fomas de refereirse a los grupos 
+\1 \2 \3...
+$1 $2 $3...
+
+{9}
+{2,7}
+{3,}
+{,8}
+--------------------------------------------
+usando cuantificadores podriamos ser mas compactos 
+Por ejemplo 
+Un telefono \d\d\d\d\d\d\d\d\d\d
+            \d{9}------------ esto es un telefono 
+Tres letras [a-z] {3}
+Un usuario de entre 4 y 8  letras, digito o guiones bajos \w{4,8}
+si no puede comenzar por un numero [a-z]\w{3,7}
+-----------------------------------------------------------
+DNI: 
+Regex para validarlo: ^\d{2}\.?\d{3}\.?\d{3}[- ]?[A-HJ-NP-Z]$
+otra forma de hacerlo  : ^\d{2}(\.?\d{3}){2}[- ]?[A-Z]$
+otra forma : ^\d{2}[.,]?\d{3}[.,]?\d{3}[- ]?[A-Z]$
+Regex para transformalo:
+^(\d{2})([.,]?)(\d{3})\2(\d{3})[- ]?([A-Z])
+Regla de transformacion . $1$3$4$5
+----------------------------------------------------------------
+Una fecha muy sencilla en dia mes año 
+Quiero cambiar las fechas de dia mes año de un texto 
+^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$
+1-1-1989
+01-12-1989
+01/01/1989
+31/05/2008
+reemplazar $2-$1-$3
+Buscar ^(\d{1,2})([-\/])(\d{1,2})\2(\d{4})$
+reemplazar $3$2$1$2$4
+------------------------------
+Una fecha (con fallos pero con cierto valir de usabilidad)
+^(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[0-2])/(19|20)\d\d$
+-------------------------------------
+una IP 
+192.168.12.6
+Cada numero de 0 a 255
+
+
+
+
+
+
+
+----------------------------------------------------- APUNTES DE JUANJO --------------------------------------------
+Pruebas de REGEX en regex101
+Copiamos algo de texto y hacemos unas pruebas de caracteres.
+
+\s......Whitespace
+\S......No whitespace
+\d......Digito
+\D......No di­gito
+\w......carÃ¡cter parte de una palabra: letras de a a z mayusculas o minusculas, digitos, guion bajo.
+\W......Algo que no valga en una palabra
+
+\x27 caracter 27 exadecimal, o sea 39, o sea comilla simple
+\x2F es el 2f exadecimal, o sea 47, o sea slash
+\O057 057 octal, que de nuevo es 47
+. ............. Cualquier carÃ¡cter
+---------------------------------------------------
+
+Rangos
+
+[aeiou]...Vocal minÃºscula, con la opciÃ³n i tambiÃ©n mayÃºscula
+[aeiouAEIOU]...Vocal mayÃºscula o minÃºscula
+[aeiouÃ¡Ã©Ã­Ã³ÃºÃ¼]..Vocal posiblemente con acentos
+
+Segmentos
+[a-z]
+[a-zA-Z0-9]
+
+Hay formas distintas de  obtener lo mismo
+
+\d ..... [0-9]
+\w ..... [a-zA-Z0-9_]
+
+Cuantificadores
+
+*........0 o mÃ¡s GREEDY
++........1 o mÃ¡s GREEDY
+?........0 o 1 "a lo mejor"
+{9}
+{2,7}
+{3,}
+{,8}
+alternativa: uso de OR
+
+Por ejemplo alumn(o|a)s?
+
+Un cÃ³digo postal 
+	^(0[1-9]|[1-4][0-9]|50)\d\d\d$
+	^(?:0[1-9]|[1-4][0-9]|50)\d\d\d$ VersiÃ³n que no captura
+Un cÃ³digo postal con un separador de miles	
+	^(?:0[1-9]|[1-4][0-9]|50)\.?\d\d\d$
+	
+Un telÃ©fono separado por espacios
+	^\d\d\s?\d\s?\d\d\s?\d\s?\d\s?\d\d$
+Un telÃ©fono separado por espacios o guiones
+	^\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
+Para que no admita separadores mezclados
+RETROREFERENCIAS  back reference	
+	^\d\d([ \-])?\d\1?\d\d\1?\d\1?\d\1?\d\d$
+	NO VA BIEN
+--------------------------------------------------
+Partiendo de
+Un telÃ©fono separado por espacios o guiones
+	^\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d$
+Definiremos una transformaciÃ³n.
+Lo primero es hacer grupos encerrando entre parÃ©ntesis lo que nos interesa conservar	
+	^(\d\d)[ \-]?(\d)[- ]?(\d\d)[\- ]?(\d)[ \-]?(\d)[ \-]?(\d\d)$
+A la hora de transformar hay dos formas de referirse a los grupos
+\1 \2 \3...
+$1 $2 $3...
+Nuestra regla de transformaciÃ³n es $1$2$3$4$5$6
+--------------------------------------------------
+Usando cunatificadores podrÃ­amos ser mÃ¡s compactos
+Por ejemplo:
+Un telÃ©fono \d\d\d\d\d\d\d\d\d
+            \d{9}
+Tres letras [a-z]{3}
+Un usuario de entre 4 y 8 letras, dÃ­gitos o guiones bajos \w{4,8}	
+Si no puede comenzar por un nÃºmero [a-z]\w{3,7}	
+------------------------------------------------
+DNI:
+Regex para validarlo: 
+	^\d{2}\.?\d{3}\.?\d{3}[- ]?[A-HJ-NP-Z]$
+	^\d{2}(\.?\d{3}){2}[- ]?[A-Z]$
+	^\d{2}\.?\d{3}\.?\d{3}[- ]?[A-Z]$
+	^\d{2}[.,]?\d{3}[.,]?\d{3}[- ]?[A-Z]$
+	Sin mezclar separadores de dÃ­gitos (nada punto o coma):
+	^\d{2}([.,]?)\d{3}\1\d{3}[- ]?[A-Z]$
+Regex para transformarlo:^(\d{2})[.,]?(\d{3})[.,]?(\d{3})[- ]?([A-Z])$
+Regla de transformaciÃ³n	$1$2$3$4
+OTRA VERSION
+Regex para transformarlo:^(\d{2})([.,]?)(\d{3})\2(\d{3})[- ]?([A-Z])$
+Regla de transformaciÃ³n	$1$3$4$5
+--------------------------------------------------
+Una fecha muy sencilla en dÃ­a mes aÃ±o
+Quiero cambiar las fechas de dÃ­a mes aÃ±o de un texto a aÃ±o mes dÃ­a
+Buscar ^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$
+Reemplazar $2-$1-$3
+RESPETANDO EL SEPARADOR
+Buscar ^(\d{1,2})([-\/])(\d{1,2})\2(\d{4})$
+Reemplazar $3$2$1$2$4
+-------------------------------------------------
+Un dÃ­a de mes (para una fecha) ^(0?[1-9]|[12][0-9]|3[01])$
+Un mes
+^(0?[1-9]|1[0-2])$
+Un aÃ±o para un cumpleaÃ±os
+^(19|20)\d\d$
+
+
