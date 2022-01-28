@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Formulario</title>
+</head>
+<body>
+
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>DNI sencillo</legend>
+            <input type="text" id="dni" name="dni" pattern="\d{8}[ \-]?[a-z A-Z]">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>DNI posiblemente con separador de miles</legend>
+            <input type="text" id="dni" name="dni" pattern="\d{2}[.,]?\d{3}[.,]?\d{3}[- ]?[A-Z]" >
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un mes (en número)</legend>
+            <input type="number" id="mes" name="mes" pattern="\d[1-12]" >
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un día de mes (en número)</legend>
+            <input type="number" id="dia" name="dia">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Una fecha sencilla (dd/mm/aaaa) o (dd-mm-aaaa)</legend>
+            <input type="date" id="fecha" name="fecha">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Una fecha sencilla sin mezclar separados (dd/mm/aaaa)</legend>
+            <input type="date" id="fecha1" name="fecha1">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un telefono</legend>
+            <input type="number" id="telefono" name="telefono">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un numero de 0 a 255</legend>
+            <input type="number" id="numero" name="numero">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>IP</legend>
+            <input type="number" id="ip" name="ip">
+            <input type="submit">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
