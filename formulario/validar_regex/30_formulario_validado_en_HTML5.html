@@ -25,7 +25,7 @@
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Un mes (en número)</legend>
-            <input type="number" id="mes" name="mes" pattern="\d[1-12]" >
+            <input type="number" id="mes" name="mes" pattern="(0?[1-9]|1[0-2])" >
             <input type="submit">
         </fieldset>
     </form>
@@ -53,14 +53,14 @@
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Un telefono</legend>
-            <input type="number" id="telefono" name="telefono">
+            <input type="number" id="telefono" name="telefono" pattern="\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d">
             <input type="submit">
         </fieldset>
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Un numero de 0 a 255</legend>
-            <input type="number" id="numero" name="numero">
+            <input type="number" id="numero" name="numero" pattern="^[0-255]$">
             <input type="submit">
         </fieldset>
     </form>
