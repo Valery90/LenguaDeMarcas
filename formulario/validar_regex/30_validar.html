@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Validación con Expresiones Regulares</title>
+</head>
+
+<body>
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>DNI sencillo</legend>
+            <!--
+/^\d{8}[ \-]?[A-Z]$/ ...... No va
+^\d{8}[ \-]?[A-Z]$......... Va bien
+\d{8}[ \-]?[A-Z]......... Va bien
+-->
+            <input type="text" name="DNI" pattern="^\d{8}[ \-]?[A-Z]$">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>DNI posiblemente con separador de miles</legend>
+            <!--
+Buscar:^(\d{2})\.?(\d{3})\.?(\d{3})[- ]?([A-Z])$
+Reemplazar:\1\2\3\4
+
+12123123D
+12123123-D
+12123123 D
+12.123.123D
+12.123.123 D
+12.123.123-D
+
+-->
+            <input type="text" name="DNI" pattern="^\d{2}\.?\d{3}\.?\d{3}[- ]?[A-Z]$">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>SEXO (hombre o mujer)</legend>
+            <!--
+-->
+            <input type="text" name="sexo" pattern="^(hombre|mujer)$">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un mes (en número)</legend>
+            <!--
+Para no definir un grupo con el o (|) podemos usar un grupo pasivo o de no captura
+(:?
+-->
+            <input type="text" name="mes" pattern="^(:?0?[1-9]|1[0-2])$">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un día de mes (en número)</legend>
+            <input type="text" name="mes" pattern="^(:?0?[1-9]|12[0-9]|3[01])$">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Una fecha sencilla (dd/mm/aaaa) o (dd-mm-aaaa)</legend>
+            <!--
+Buscar:^(\d{1,2})[-\/](\d{1,2})[-\/]((?:19|20)\d{2})$
+Reemplazar:\3-\2-\1
+
+20/01/2020
+20/1/2020
+20-01-2020
+1-3-1990
+2-5/2013
+-->
+            <input type="text" name="fecha" pattern="^\d{1,2}[-\/]\d{1,2}[-\/](19|20)\d{2}$">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Una fecha sencilla sin mezclar separadores(dd/mm/aaaa)</legend>
+            <!--
+Para que no permita mezclar separadores usamos 
+BACKREFERENCE o retroreferencias
+Buscar:^(\d{1,2})[-\/](\d{1,2})[-\/]((?:19|20)\d{2})$
+Reemplazar:\3-\2-\1
+
+20/01/2020
+20/1/2020
+20-01-2020
+1-3-1990
+2-5/2013
+-->
+            <input type="text" name="fecha" pattern="^\d{1,2}[-\/]\d{1,2}[-\/](19|20)\d{2}$">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un teléfono</legend>
+            <!--
+Buscar:^(\d{2})[- ]?(\d)[- ]?(\d{2})[- ]?(\d)[- ]?(\d)[- ]?(\d{2})$
+Reemplazar:\1\2\3\4\5\6
+
+123123123
+123-123-123
+123 123 123
+123-12-12-12
+123 12 12 12
+12-123-12-12
+12 123 12 12
+-->
+            <input type="text" name="tel" pattern="^\d{2}[- ]?\d[- ]?\d{2}[- ]?\d[- ]?\d[- ]?\d{2}$">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Un número de 0 a 255</legend>
+            <!--
+^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+Otra versión
+^(0?\d?\d|1\d\d|2([0-4]\d|5[0-5]))$
+-->
+            <input type="text" name="ip" pattern="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <form action="http://10.22.23.71/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
+            <legend>Una IP</legend>
+            <!--
+^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+Otra versión
+^(0?\d?\d|1\d\d|2([0-4]\d|5[0-5]))$
+-->
+            <input type="text" name="ip"
+                pattern="((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)">
+            <input type="submit">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

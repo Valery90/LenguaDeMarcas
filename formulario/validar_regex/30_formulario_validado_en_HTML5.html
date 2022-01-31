@@ -24,8 +24,15 @@
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
+            <legend>SEXO (hombre o mujer)</legend>
+            <input type="text" name="sexo" pattern="^[MH-mh]$">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
+        <fieldset>
             <legend>Un mes (en número)</legend>
-            <input type="number" id="mes" name="mes" pattern="(0?[1-9]|1[0-2])" >
+            <input type="month" id="mes" name="mes" pattern="^(0?[1-9]|1[0-2])$" >
             <input type="submit">
         </fieldset>
     </form>
@@ -39,35 +46,35 @@
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Una fecha sencilla (dd/mm/aaaa) o (dd-mm-aaaa)</legend>
-            <input type="date" id="fecha" name="fecha">
+            <input type="text" id="fecha" name="fecha" pattern="^(0?[1-9]|[12][0-9]|3[01])[-\/](0?[1-9]|1[0-2])[-\/](\d{4})$">
             <input type="submit">
         </fieldset>
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Una fecha sencilla sin mezclar separados (dd/mm/aaaa)</legend>
-            <input type="date" id="fecha1" name="fecha1">
+            <input type="date" id="fecha1" name="fecha1" pattern="^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$">
             <input type="submit">
         </fieldset>
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Un telefono</legend>
-            <input type="number" id="telefono" name="telefono" pattern="\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d">
+            <input type="tel" id="telefono" name="telefono" pattern="\d\d[ \-]?\d[- ]?\d\d[\- ]?\d[ \-]?\d[ \-]?\d\d">
             <input type="submit">
         </fieldset>
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>Un numero de 0 a 255</legend>
-            <input type="number" id="numero" name="numero" pattern="^[0-255]$">
+            <input type="text" id="numero" name="numero" pattern="^(\d{1,2}|(0|1)\d{2}|2[0-4]\d|25[0-5])$">
             <input type="submit">
         </fieldset>
     </form>
     <form action="http://10.0.56.5/~juanjo/00_primero/recoger_datos.php" method="GET">
         <fieldset>
             <legend>IP</legend>
-            <input type="number" id="ip" name="ip">
+            <input type="text" id="ip" name="ip">
             <input type="submit">
         </fieldset>
     </form>
