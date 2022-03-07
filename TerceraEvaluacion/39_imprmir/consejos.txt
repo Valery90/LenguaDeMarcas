@@ -1,0 +1,226 @@
+Hay dos formas de incluir una hoja de estilo para imprimir en una página web:
+1.-Usando la etiqueta link
+
+Reglas de estilo para usar siempre
+<link rel="stylesheet" href="css/general.css" >
+
+Reglas de estilo para usar solo en pantalla
+<link rel="stylesheet" href="css/pantalla.css" media="screen">
+
+Reglas de estilo para usar solo para imprimir
+
+<link rel="stylesheet" href="css/imprimir.css" media="print">
+
+La otra posibilidad es la que dan las media queries
+
+@media print{
+	aquí escribimos reglas sólo para imprimir
+}
+
+@media screen
+	aquí escribimos reglas sólo para pantalla
+}
+
+Lo que hay fuera de las media queries se usa siempre
+
+---------------------------------------------------
+Oculta lo que no tiene sentido al imprimir:
+
+->Controles de navegación
+->Anuncios y similares
+->...
+
+header nav, footer {
+	display: none;
+}
+
+Mira si tiene sentido ocultar <video>, <audio>, <object> and <embed>, <iframe>
+
+Una opción para imágenes es 
+img{
+	display: none;
+}
+Otra opción es limitar el tamaño para que no se nos salga de la página
+img {
+	max-width: 500px;
+}
+
+@page {
+margin: 0.5cm;
+}
+
+
+Tenemos pseudoclases para páginas
+
+@page :left {
+margin: 0.5cm;
+}
+
+@page :right {
+margin: 0.8cm;
+}
+
+@page :first {
+  margin: 1cm 2cm;
+}
+
+La fuente debería ser un poco mayor de lo habitual y el espacio entre líneas algo mayor también.
+
+Las fuentes para imprimir deberían ser "serif".
+El tamaño que entiende la impresora son puntos (pt)
+
+body {
+font: 12pt Georgia, "Times New Roman", Times, serif;
+line-height: 1.3;
+}
+
+h1 {
+font-size: 24pt;
+}
+
+h2 {
+font-size: 14pt;
+margin-top: 25px;
+}
+
+aside h2 {
+font-size: 18pt;
+}
+
+Podemos dar un tratamiento distinto a elementos que por defecto aparecen indentados (con mucho espacio alrededor)
+
+blockquote, ul {
+margin: 0;
+}
+
+Suele quedar mal al imprimir la "bala" de las listas no ordenadas
+
+Se suele quitar
+
+ul {list-style: none}
+
+y sustituir por "una bala de texto"
+
+li:before {
+	content: "» ";
+}
+
+Podemos tener en una cabecera dos versiones del logo, una para pantalla y otra para imprimir
+
+<a href="/" title="Home" class="logo">
+   <img src="img/logo.png" alt="Smashing Winery" class="screen"/>
+   <img src="img/logo_print.png" alt="" class="print"/>
+</a>
+Se supone que en la hoja de estilo para pantalla pondrá 
+
+img.print{
+	display:none;
+}
+
+Por el contrario en la de imprimir habrá que poner 
+
+header .print {
+	display: block;
+}
+
+header .screen {
+	display: none;
+}
+
+Después de la cabecera, nos puede interesar meter:
+->La dirección del sitio
+->Un código QR que tenía display:none y le ponemos display:block
+
+header:after {
+	content: "www.smashing-winery.com";
+}
+
+Podemos poner algo más elaborado antes de la cabecera, es decir, hacer una cabecera para imprimir
+
+header:before {
+	display: block;
+	content: "Thank you for printing our content at www.smashing-winery.com. Please check back soon for new offers on delicious wine from our winery.";
+	margin-bottom: 10px;
+	border: 1px solid #bbb;
+	padding: 3px 5px;
+	font-style: italic;
+}
+
+
+A las imágenes que hayamos ocultado hay que quitarles el borde porque en algunos navegadores podría salir el borde sólo (sin contenido) 
+
+header img {
+	border: 0;
+}
+
+Controlamos la separación entre la cabecera y el texto
+header {
+	margin-bottom: 40px;
+}
+
+Podemos poner a continuación de los enlaces la URL a la que apuntan
+
+p a:after {
+	content: " (" attr(href) ")";
+	font-size: 80%;
+}
+
+Nos puede interesar marcar solo los externos
+
+p a[href^="http://"]:after ,p a[href^="https://"]:after{
+	content: " (" attr(href) ")";
+	font-size: 90%;
+}
+
+Nos puede interesar ocultar losm enlaces dentro de la misma página (anclas), que empiezan por #
+
+p a[href^="#"]:after {
+display: none;
+}
+
+p a:after {
+content: "(http://elorrieta.com/" attr(href) ")";
+}
+
+Si tenemos una URL muy larga que no quepa en una línea, debemos permitir que rompa la palabra
+
+p a {
+	word-wrap: break-word;
+}
+
+No queremos los enlaces en azul
+
+a {
+color: #000;
+}
+
+Puedo hacer que el atributo cite de las citas, se vea al imprimir.
+q:after {
+	content: " (Fuente: " attr(cite) ")";
+}
+
+Si tienes informaciones en un <aside>, que verás en pantalla a izquierda o derecha, posiblemente te interesa que aparezca detrás del texto pero resaltado de alguna manera: un borde, un tipo de letra diferente o ligeramente menor o ligeramente más clara
+
+aside {
+border-top: 1px solid #bbb;
+margin-top: 30px;
+display: block;
+}
+
+Podríamos incluso forzar un salto de página
+aside {
+	page-break-before: always;
+}
+
+También existe page-break-after: always
+
+Otras propiedades son 
+widows(viudas) ....Lineas que se quedan descolgadas a inicio de página.
+orphans(huérfanos)..Lineas que se quedan colgadas al final
+------------------------------------------
+
+Para las imágenes, hay una de evitar que nos la corte en dos páginas
+
+img{
+	max-width:100%; /*para que no las corte a lo ancho*/
+	page-break-inside: avoid;/* para que no las corte en vertical*/
